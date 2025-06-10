@@ -1,0 +1,932 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Renty Locações & Soluções em Manaus</title>
+<!--CSS-->
+<link rel="stylesheet" href="css/navbar.css">
+<link rel="stylesheet" href="css/home.css">
+<link rel="stylesheet" href="css/footer.css">
+
+  <!-- SEO -->
+  <meta name="robots" content="index, follow">
+  <meta name="description" content="Empresa em Manaus especializada em terceirização, manutenção, gestão e elétrica. Descomplicamos as operações da sua empresa com locações de equipamentos sob medida.">
+  <meta name="keywords" content="Manaus, locações Manaus, aluguel de equipamentos em Manaus, manutenção em Manaus, elétrica em Manaus, terceirização Manaus, gestão operacional, Renty">
+  <meta name="author" content="Renty Locações">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Renty Locações & Soluções em Manaus">
+  <meta property="og:description" content="Soluções completas de manutenção, elétrica e locações em Manaus. Atendemos empresas com excelência e agilidade.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.rentysolutions.com.br">
+
+
+  <!-- Local Business (ajuda com SEO local) -->
+  <meta name="geo.region" content="BR-AM" />
+  <meta name="geo.placename" content="Manaus" />
+  <meta name="geo.position" content="-3.119027;-60.021731" />
+  <meta name="ICBM" content="-3.119027, -60.021731" />
+
+  <!-- Favicon e Styles -->
+  <link rel="icon" href="images/favicon.webp" type="image/x-icon">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter&family=Poppins:wght@500;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+  <div id="nav-container"></div>
+
+<div id="productModal">
+  <div class="productModal-content">
+    <button class="productModal-close" onclick="closeModal()"><i class="bi bi-x"></i></button>
+    <h2>Como você gostaria de ver sua oferta de produto?</h2>
+    <div class="productModal-buttons">
+      
+      <button onclick="selectOption('business')">Business (Excl. VAT)</button>
+      <button onclick="selectOption('individual')">Individual (inc. VAT)</button>
+    </div>
+  </div>
+</div>
+
+<div class="hero">
+  <video autoplay muted loop>
+    <source src="images/hero.webm" type="video/mp4">
+    Seu navegador não suporta vídeos em HTML5.
+  </video>
+
+<div class="hero-content">
+  <h2>Encontre o melhor material para sua empresa.</h2>
+  <div class="search-bar">
+   <input id="searchInput" type="text" placeholder="O lugar certo para você alugar tudo que precisa para sua obra, projeto ou empresa." autocomplete="off">
+
+    <button id="searchBtn"><i class="bi bi-search"></i></button>
+  </div>
+
+  <div id="searchDropdown" class="search-dropdown">
+    <!-- Produtos organizados por categoria -->
+
+    <div class="category" data-category="construção civil">
+      <div class="category-header">
+        <img src="images/card (4).webp" alt="Construção Civil">
+       
+      </div>
+      <div>
+         <ul><li><h4>Construção Civil</h4></li></ul>
+      <ul>
+        <li><a href="andaimes.html">Andaimes e Escoras metálicas</a></li>
+        <li><a href="betoneira.html">Betoneira</a></li>
+        <li><a href="compactador-de-solo.html">Compactador de Solo</a></li>
+        <li><a href="lixadeira.html">Lixadeira de Concreto</a></li>
+        <li><a href="maquina-de-chapisco.html">Máquina de Chapisco</a></li>
+        <li><a href="placa-vibratoria.html">Placa Vibratória</a></li>
+        <li><a href="pintura-airless.html">Pintura Airless</a></li>
+        <li><a href="rompedor-de-concreto.html">Rompedor de Concreto</a></li>
+        <li><a href="alisadora-de-concreto.html">Alisadora de Concreto</a></li>
+      </ul></div>
+    </div>
+
+    <div class="category" data-category="food service">
+      <div class="category-header">
+        <img src="images/card (17).webp" alt="Food Service">
+      
+      </div>
+      <div>
+        <ul><li><h4>Food Service</h4></li></ul>
+      <ul>
+        <li><a href="forno-industrial.html">Forno Industrial</a></li>
+        <li><a href="mesa-seca.html">Mesa seca Inox</a></li>
+        <li><a href="refrigeracao.html">Refrigeração</a></li>
+        <li><a href="corte-de-carne.html">Máquina de corte de carnes</a></li>
+      </ul></div>
+    </div>
+
+    <div class="category" data-category="t.i">
+      <div class="category-header">
+        <img src="images/card (13).webp" alt="T.I.">
+     
+      </div>
+      <div>
+        <ul><li><h4>T.I.</h4></li></ul>
+      <ul>
+     
+        <li><a href="computadores-e-notebooks.html">Desktops e Notebooks</a></li>
+        <li><a href="dispositivos-moveis.html">Tablets e Celulares</a></li>
+    
+        <li><a href="impressao.html">Impressoras e Multifuncionais</a></li>
+        <li><a href="hardware.html">Hardware</a></li>
+       
+      </ul></div>
+    </div>
+      <div class="category" data-category="unidade de energia">
+      <div class="category-header">
+        <img src="images/card (5).webp" alt="unidade de energia">
+      
+      </div>
+      <div>
+        <ul><li><h4>Unidade de Energia</h4></li></ul>
+      <ul>
+        <li><a href="gerador-de-energia.html">Gerador de energia</a></li>
+        <li><a href="quadro-de-transferencia.html">Quadro de Transferência</a></li>	
+        <li><a href="nobreak.html">Nobreaks</a></li>
+        <li><a href="torre-de-energia.html">Torre de Energia</a></li>
+      </ul></div>
+    </div>
+  </div>
+</div>
+
+
+</div>
+
+<button id="btn-topo" aria-label="Voltar para o topo"><i class="bi bi-arrow-up-short"></i></button>
+
+<script>
+  const btnTopo = document.getElementById('btn-topo');
+
+  window.addEventListener('scroll', () => {
+    const scrollPosition = window.scrollY || document.documentElement.scrollTop;
+    const halfPage = document.documentElement.scrollHeight / 2;
+
+    if (scrollPosition > halfPage) {
+      btnTopo.classList.add('show');
+    } else {
+      btnTopo.classList.remove('show');
+    }
+  });
+
+  btnTopo.addEventListener('click', () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  });
+</script>
+<div class="hero-second">
+  <div class="hero-second-div1">
+    <div>
+  <h2>Nossas linhas de equipamentos</h2>
+  <p>Alugue equipamentos  de diversas categorias com a
+Renty e potencialize sua operação com solução sob
+medida.</p>
+</div>
+<div>
+ <a href="produtos.html"><button class="cta-button">CONHEÇA TODAS AS LINHAS</button></a>
+</div>
+</div>
+<div class="carousel-container">
+  <div class="carousel-track" id="carouselTrack">
+
+    <div class="card">
+      <div class="card-content">
+        <a href="locacoes.html">
+          <img src="images/card (2).webp" alt="Aluguel de Compactador de Solo">
+          <h3>Compactador de Solo</h3>
+          <p>Equipamento ideal para compactar o solo em obras e fundações.</p>
+        </a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-content">
+        <a href="locacoes.html">
+          <img src="images/card (1).webp" alt="Aluguel de Placa Vibratória">
+          <h3>Placa Vibratória</h3>
+          <p>Utilizada para compactar superfícies granulares em pequenas e médias áreas.</p>
+        </a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-content">
+        <a href="locacoes.html">
+          <img src="images/card (9).webp" alt="Aluguel de Alisadora de Concreto">
+          <h3>Alisadora de concreto</h3>
+          <p>Indicada para o acabamento e nivelamento de pisos de concreto.</p>
+        </a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-content">
+        <a href="locacoes.html">
+          <img src="images/card (3).webp" alt="Aluguel de Pintura Airless">
+          <h3>Pintura Airless</h3>
+          <p>Equipamento para pintura de superfícies com acabamento uniforme e rápido.</p>
+        </a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-content">
+        <a href="locacoes.html">
+          <img src="images/card (4).webp" alt="Aluguel de Betoneira">
+          <h3>Betoneira</h3>
+          <p>Ideal para mistura de concreto de forma rápida <br> e homogênea.</p>
+        </a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-content">
+        <a href="locacoes.html">
+          <img src="images/card (5).webp" alt="Aluguel de Gerador de Energia">
+          <h3>Gerador de Energia</h3>
+          <p>Essencial para fornecer energia elétrica em obras, eventos e situações de emergência.</p>
+        </a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-content">
+        <a href="locacoes.html">
+          <img src="images/card (6).webp" alt="Aluguel de Lixadeira de Parede e Teto">
+          <h3>Lixadeira</h3>
+          <p>Ideal para lixamento de paredes, tetos e áreas amplas com agilidade.</p>
+        </a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-content">
+        <a href="locacoes.html">
+          <img src="images/card (7).webp" alt="Aluguel de Quadro de Transferência">
+          <h3>Quadro de Transferência</h3>
+          <p>Controla a distribuição de energia entre gerador e rede elétrica com segurança.</p>
+        </a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-content">
+        <a href="locacoes.html">
+          <img src="images/card (8).webp" alt="Aluguel de Equipamentos Diversos">
+          <h3>E mais +</h3>
+          <p>Confira nosso catálogo completo de equipamentos <br> para locação.</p>
+        </a>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="controls control-left" onclick="moveSlide(-1)"><i class="bi bi-arrow-left-short"></i></div>
+  <div class="controls control-right" onclick="moveSlide(1)"><i class="bi bi-arrow-right-short"></i></div>
+</div>
+</div>
+
+<div class="grid-section">
+  <div class="grid-image">
+    <img src="images/renty-box.webp" alt="Soluções Renty">
+  </div>
+  <div class="grid-text">
+    <h2>Soluções corporativas completas para sua empresa</h2>
+    <p>
+      A <strong>Renty</strong> se destaca como a plataforma referência em soluções corporativas,
+      oferecendo uma completa gama de planos de locação e soluções customizadas, com
+      foco na otimização das operações dos clientes, agregando valor com resultados
+      positivos, sustentabilidade e fomentando a economia regenerativa.
+    </p>
+    <p>
+      Também assessoramos nossos clientes com revenda de materiais e insumos
+      complementares, além de serviços personalizados.
+    </p>
+    <p>
+      Escolha a <strong>Renty</strong> e transforme a gestão de ativos em uma vantagem competitiva.
+    </p>
+    <a href="https://web.whatsapp.com/send?phone=5592985771111&text=" class="button">Fale com um especialista</a>
+  </div>
+</div>
+<div class="hero-second">
+  <div class="hero-second-div1">
+    <div>
+  <h2>Unidades de Energia</h2>
+  <p>Alugue equipamentos  de diversas categorias com a
+Renty e potencialize sua operação com solução sob
+medida.</p>
+</div>
+<div>
+ <a href="produtos.html"><button class="cta-button">CONHEÇA TODAS AS LINHAS</button></a>
+</div>
+</div>
+
+
+<div class="carousel-container" id="carrossel-2">
+  <div class="carousel-track" id="carouselTrack">
+
+    <div class="card">
+      <div class="card-content">
+        <a href="locacoes.html">
+          <img src="images/card (5).webp" alt="Aluguel de Gerador de Energia Manaus">
+          <h3>Gerador de Energia</h3>
+          <p>Equipamento ideal para fornecer energia elétrica em obras e eventos.</p>
+        </a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-content">
+        <a href="locacoes.html">
+          <img src="images/card (10).webp" alt="Aluguel de Quadro de Transferência">
+          <h3>Quadro de Transferência</h3>
+          <p>Controla a distribuição de energia entre gerador e rede elétrica com segurança.</p>
+        </a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-content">
+        <a href="locacoes.html">
+          <img src="images/card (11).webp" alt="Aluguel de NoBreak">
+          <h3>NoBreak</h3>
+          <p>Equipamento que garante o fornecimento contínuo de energia elétrica.</p>
+        </a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-content">
+        <a href="locacoes.html">
+          <img src="images/card (12).webp" alt="Aluguel de Torre de Energia Manaus">
+          <h3>Torre de Energia</h3>
+          <p>Locação de torre para fornecimento de energia temporário.</p>
+        </a>
+      </div>
+    </div>
+
+   
+
+
+  </div>
+ <div class="controls control-left" onclick="moveSlide(-1)"><i class="bi bi-arrow-left-short"></i></div>
+  <div class="controls control-right" onclick="moveSlide(1)"><i class="bi bi-arrow-right-short"></i></div>
+</div>
+</div>
+
+
+
+<script>
+  // Produtos simulados com imagens e nomes, organizados por categoria > subcategoria
+  const produtosData = {
+    foodservice: {
+      producao: [
+        { id: 'prod1', nome: 'Fogão Industrial', img: 'https://via.placeholder.com/120?text=Fogão' },
+        { id: 'prod2', nome: 'Fritadeira', img: 'https://via.placeholder.com/120?text=Fritadeira' }
+      ],
+      manipulacao: [
+        { id: 'prod3', nome: 'Luvas Térmicas', img: 'https://via.placeholder.com/120?text=Luvas' },
+        { id: 'prod4', nome: 'Facas Profissionais', img: 'https://via.placeholder.com/120?text=Facas' }
+      ],
+      'armazenamento-seco': [
+        { id: 'prod5', nome: 'Estantes Secas', img: 'https://via.placeholder.com/120?text=Estantes' }
+      ],
+      'armazenamento-quente': [
+        { id: 'prod6', nome: 'Aquecedor de Comida', img: 'https://via.placeholder.com/120?text=Aquecedor' }
+      ],
+      'armazenamento-refrigerado': [
+        { id: 'prod7', nome: 'Geladeira Industrial', img: 'https://via.placeholder.com/120?text=Geladeira' }
+      ],
+      'exposicao-quente': [
+        { id: 'prod8', nome: 'Vitrine Aquecida', img: 'https://via.placeholder.com/120?text=Vitrine' }
+      ],
+      'exposicao-seco': [
+        { id: 'prod9', nome: 'Prateleira Exposição', img: 'https://via.placeholder.com/120?text=Prateleira' }
+      ],
+      'exposicao-refrigerado': [
+        { id: 'prod10', nome: 'Vitrine Refrigerada', img: 'https://via.placeholder.com/120?text=Vitrine+Frio' }
+      ]
+    },
+    construcao: {
+      materiais: [
+        { id: 'prod11', nome: 'Cimento', img: 'https://via.placeholder.com/120?text=Cimento' },
+        { id: 'prod12', nome: 'Areia', img: 'https://via.placeholder.com/120?text=Areia' }
+      ],
+      ferramentas: [
+        { id: 'prod13', nome: 'Martelo', img: 'https://via.placeholder.com/120?text=Martelo' },
+        { id: 'prod14', nome: 'Serrote', img: 'https://via.placeholder.com/120?text=Serrote' }
+      ],
+      equipamentos: [
+        { id: 'prod15', nome: 'Betoneira', img: 'https://via.placeholder.com/120?text=Betoneira' }
+      ]
+    },
+    ti: {
+      hardware: [
+        { id: 'prod16', nome: 'Notebook', img: 'https://via.placeholder.com/120?text=Notebook' },
+        { id: 'prod17', nome: 'Monitor', img: 'https://via.placeholder.com/120?text=Monitor' }
+      ],
+      software: [
+        { id: 'prod18', nome: 'Antivírus', img: 'https://via.placeholder.com/120?text=Antivírus' },
+        { id: 'prod19', nome: 'Pacote Office', img: 'https://via.placeholder.com/120?text=Office' }
+      ],
+      impressao: [
+        { id: 'prod20', nome: 'Impressora', img: 'https://via.placeholder.com/120?text=Impressora' }
+      ]
+    },
+    energia: {
+      geradores: [
+        { id: 'prod21', nome: 'Gerador Diesel', img: 'https://via.placeholder.com/120?text=Gerador' }
+      ],
+      baterias: [
+        { id: 'prod22', nome: 'Bateria Solar', img: 'https://via.placeholder.com/120?text=Bateria' }
+      ],
+      'painel-solar': [
+        { id: 'prod23', nome: 'Painel Solar', img: 'https://via.placeholder.com/120?text=Painel' }
+      ]
+    }
+  };
+
+  const categoriaSelect = document.getElementById('categoria');
+  const subcategoriasContainers = document.querySelectorAll('.form-produtos-subcategoria-container');
+  const produtosContainer = document.getElementById('produtos-container');
+
+  // Limpa subcategorias e produtos
+  function resetSubcats() {
+    subcategoriasContainers.forEach(c => {
+      c.classList.remove('active');
+      const select = c.querySelector('select');
+      if(select){
+        select.value = '';
+      }
+    });
+    produtosContainer.classList.remove('active');
+    produtosContainer.innerHTML = '';
+  }
+
+  // Atualiza produtos na tela baseado em categoria e subcategoria
+  function mostrarProdutos(categoria, subcategoria) {
+    produtosContainer.innerHTML = '';
+    if (!produtosData[categoria] || !produtosData[categoria][subcategoria]) {
+      produtosContainer.classList.remove('active');
+      return;
+    }
+
+    const produtos = produtosData[categoria][subcategoria];
+
+    produtos.forEach(prod => {
+      const prodDiv = document.createElement('div');
+      prodDiv.classList.add('form-produtos-produto');
+
+      prodDiv.innerHTML = `
+        <img src="${prod.img}" alt="${prod.nome}">
+        <div>${prod.nome}</div>
+        <div>
+          <label for="quant-${prod.id}">Qtd:</label>
+          <input type="number" id="quant-${prod.id}" name="quant-${prod.id}" min="0" value="0" class="form-produtos-quantidade" />
+        </div>
+      `;
+
+      produtosContainer.appendChild(prodDiv);
+    });
+
+    produtosContainer.classList.add('active');
+  }
+
+  categoriaSelect.addEventListener('change', () => {
+    resetSubcats();
+    const val = categoriaSelect.value;
+    if (!val) return;
+
+    // Mostrar o container da subcategoria correta
+    const container = document.getElementById('subcategorias-' + val);
+    if (container) {
+      container.classList.add('active');
+    }
+  });
+
+  // Escuta mudanças em todos os selects de subcategorias para mostrar produtos
+  subcategoriasContainers.forEach(container => {
+    const select = container.querySelector('select');
+    select.addEventListener('change', () => {
+      const categoria = categoriaSelect.value;
+      const subcategoria = select.value;
+      mostrarProdutos(categoria, subcategoria);
+    });
+  });
+
+  // Form submit simples (pode ser adaptado pra enviar via AJAX ou backend)
+  document.getElementById('form-produtos-form').addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    // Pega dados do form
+    const formData = new FormData(e.target);
+    // Montar objeto para mostrar no console por exemplo
+    const data = {};
+    formData.forEach((value, key) => {
+      data[key] = value;
+    });
+
+    // Validação simples de datas
+    const dataInicio = new Date(data['data-inicio']);
+    const dataFim = new Date(data['data-fim']);
+    if (dataFim < dataInicio) {
+      alert('Data fim deve ser maior ou igual a data início.');
+      return;
+    }
+
+    // Validar pelo menos 1 produto com quantidade > 0
+    let hasProduct = false;
+    Object.keys(data).forEach(key => {
+      if (key.startsWith('quant-') && Number(data[key]) > 0) {
+        hasProduct = true;
+      }
+    });
+
+    if (!hasProduct) {
+      alert('Selecione ao menos um produto com quantidade maior que zero.');
+      return;
+    }
+
+    console.log('Dados enviados:', data);
+    alert('Formulário enviado com sucesso! Veja o console para detalhes.');
+
+    e.target.reset();
+    resetSubcats();
+  });
+</script>
+
+<div id="hero3" class="hero3-section" style="background-color: #f25c1c">
+  <div class="hero3-left">
+    <div class="hero3-image-icon">
+      <img src="images/icon (3).webp" alt="Locações Insdustriais em Manaus">
+    </div>
+    <h2 class="hero3-title">LOCAÇÕES</h2>
+    <p class="hero3-description">Trabalhamos nos setores de locações em:</p>
+    <div class="hero3-cards">
+      <div class="hero3-card"><i class="bi bi-fork-knife"></i> FOOD SERVICE</div>
+      <div class="hero3-card" id="card-color"><i class="bi bi-pc-display"></i> T.I. IMPRESSÃO E +</div>
+      <div class="hero3-card" id="card-color"><i class="bi bi-lightning-charge-fill"></i> UNIDADES DE ENERGIA</div>
+      <div class="hero3-card"><i class="bi bi-hammer"></i> CONSTRUÇÃO CIVIL</div>
+    </div>
+    <div class="hero3-controls">
+      <button class="hero3-button"><a href="  .html">SABER MAIS</a></button>
+      <div class="hero3-arrows">
+        <button class="hero3-arrow" onclick="hero3Prev()"><i class="bi bi-chevron-left"></i></button>
+        <button class="hero3-arrow" onclick="hero3Next()"><i class="bi bi-chevron-right"></i></button>
+      </div>
+    </div>
+  </div>
+  <div class="hero3-right">
+    <img id="hero3-img" class="hero3-image" src="images/img-hero3 (1).webp" alt="Locações Insdustriais em Manaus">
+  </div>
+</div>
+
+
+<script>
+const hero3Data = [
+  {
+    bg: '#f25c1c',
+    title: 'LOCAÇÕES',
+    description: 'Trabalhamos nos setores de locações em:',
+    cards: [
+      { icon: 'bi-fork-knife', text: 'FOOD SERVICE' },
+      { icon: 'bi-pc-display', text: 'T.I. IMPRESSÃO E +', id: 'card-color' },
+      { icon: 'bi-lightning-charge-fill', text: 'UNIDADES DE ENERGIA', id: 'card-color' },
+      { icon: 'bi-hammer', text: 'CONSTRUÇÃO CIVIL' }
+    ],
+    image: 'images/img-hero3 (1).webp',
+    iconImage: 'images/icon (3).webp',
+    buttonColor: '#004d4d',
+    buttonLink: 'produtos.html'
+  },
+  {
+    bg: '#f9a628',
+    title: 'REVENDA',
+    description: 'Setores voltados à infraestrutura:',
+    cards: [
+      { icon: 'bi-pc', text: 'T.I. IMPRESSÃO' },
+      { icon: 'bi-lightning-fill', text: 'ELÉTRICA' , id: 'card-color' },
+      { icon: 'bi-tools', text: 'CONSTRUÇÃO CIVIL' , id: 'card-color' },
+      { icon: 'bi-info-square-fill', text: 'INDUSTRIAL' }
+    ],
+    image: 'images/img-hero3 (2).webp',
+    iconImage: 'images/icon (1).webp',
+    buttonColor: '#004d4d',
+    buttonLink: 'revenda.html'
+  },
+  {
+    bg: '#00505a',
+    title: 'SOLUÇÕES',
+    description: 'Setores de inovação para locação:',
+    cards: [
+      { icon: 'bi-tools', text: 'TERCEIRIZAÇÃO' },
+      { icon: 'bi-battery-charging', text: 'MANUTENÇÃO', id: 'card-color'  },
+      { icon: 'bi-wrench', text: 'GESTÃO', id: 'card-color'  },
+      { icon: 'bi-reception-4', text: 'SOLUÇÕES B2B' }
+    ],
+    image: 'images/img-hero3 (3).webp',
+    iconImage: 'images/icon (2).webp',
+    buttonColor: '#ff6600',
+    buttonLink: 'solucoes.html'
+  }
+];
+
+  let hero3Index = 0;
+
+  function hero3Render() {
+    const data = hero3Data[hero3Index];
+    const hero3 = document.getElementById('hero3');
+    const cardsContainer = document.querySelector('.hero3-cards');
+
+    // Fade out
+    cardsContainer.classList.add('fade-out');
+
+    setTimeout(() => {
+      // Troca fundo, texto, imagem e botão
+      hero3.style.backgroundColor = data.bg;
+      document.querySelector('.hero3-title').textContent = data.title;
+      document.querySelector('.hero3-description').textContent = data.description;
+
+      // Troca os cards
+      cardsContainer.innerHTML = '';
+      data.cards.forEach(card => {
+        const div = document.createElement('div');
+        div.className = 'hero3-card';
+        if (card.id) div.id = card.id;
+        div.innerHTML = `<i class="bi ${card.icon}"></i> ${card.text}`;
+        cardsContainer.appendChild(div);
+      });
+
+      // Atualiza imagem da direita
+      document.getElementById('hero3-img').src = data.image;
+
+      // Atualiza imagem do ícone
+      document.querySelector('.hero3-image-icon img').src = data.iconImage;
+
+      // Atualiza cor do botão
+      document.querySelector('.hero3-button').style.backgroundColor = data.buttonColor;
+
+      // Fade in
+      cardsContainer.classList.remove('fade-out');
+    }, 300);
+  }
+
+  function hero3Next() {
+    hero3Index = (hero3Index + 1) % hero3Data.length;
+    hero3Render();
+  }
+
+  function hero3Prev() {
+    hero3Index = (hero3Index - 1 + hero3Data.length) % hero3Data.length;
+    hero3Render();
+  }
+</script>
+
+
+<a href="https://web.whatsapp.com/send?phone=5592985771111&text=" target="_blank" class="whatsapp-button" id="whatsappButton">
+  <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" />
+</a>
+
+
+<div class="categorias-div-hero">
+  <h2 class="titulo-categorias">Ver todas as categorias</h2>
+
+  <div class="categorias-container">
+   <a href="produtos.html"> <div class="categoria-card">
+      <img src="images/category-card (1).webp" alt="Offshore" />
+      <div class="categoria-texto">
+       Construção Civil <span class="seta"><i class="bi bi-arrow-right"></i></span>
+      </div>
+    </div></a>
+
+    <a href="produtos.html"> <div class="categoria-card">
+      <img src="images/category-card (2).webp" alt="Construction" />
+      <div class="categoria-texto">
+        Unidades de Energia <span class="seta"><i class="bi bi-arrow-right"></i></span>
+      </div>
+    </div></a>
+
+    <a href="produtos.html"> <div class="categoria-card">
+      <img src="images/category-card (3).webp" alt="Industry & Production" />
+      <div class="categoria-texto">
+        Food Service <span class="seta"><i class="bi bi-arrow-right"></i></span>
+      </div>
+    </div></a>
+
+    <a href="produtos.html"> <div class="categoria-card">
+      <img src="images/category-card (4).webp" alt="Distribution Centres" />
+      <div class="categoria-texto">
+        TI <span class="seta"><i class="bi bi-arrow-right"></i></span>
+      </div>
+    </div></a>
+  </div>
+  <br><br>
+  
+</div>
+
+
+ <div id="footer-container"></div>
+
+
+
+<script>
+  // Carrega a navbar
+  fetch('navbar.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('nav-container').innerHTML = data;
+
+      // Agora que a navbar foi carregada, adicione os eventos
+      const hamburger = document.getElementById('hamburger');
+      const mobileMenu = document.getElementById('mobileMenu');
+
+      if (hamburger && mobileMenu) {
+        hamburger.addEventListener('click', () => {
+          mobileMenu.style.display = mobileMenu.style.display === 'flex' ? 'none' : 'flex';
+        });
+      }
+    });
+</script>
+
+ 
+
+<script>
+  const searchBtn = document.getElementById('searchBtn');
+  const searchDropdown = document.getElementById('searchDropdown');
+  const searchInput = document.getElementById('searchInput');
+
+  // Mostrar/ocultar dropdown ao clicar no botão
+  searchBtn.addEventListener('click', () => {
+    if (searchDropdown.style.display === 'block') {
+      searchDropdown.style.display = 'none';
+    } else {
+      searchDropdown.style.display = 'block';
+      filterProducts(); // Atualiza o filtro ao abrir
+    }
+  });
+
+  // Mostrar dropdown ao focar no input
+  searchInput.addEventListener('focus', () => {
+    searchDropdown.style.display = 'block';
+    filterProducts(); // já mostra filtrado
+  });
+
+  // Filtrar categorias e produtos conforme o texto digitado
+  function filterProducts() {
+    const filter = searchInput.value.toLowerCase();
+    const categories = searchDropdown.querySelectorAll('.category');
+
+    categories.forEach(cat => {
+      const catName = cat.getAttribute('data-category');
+      const products = cat.querySelectorAll('ul li');
+
+      let showCategory = false;
+
+      products.forEach(prod => {
+        const text = prod.textContent.toLowerCase();
+        if (filter === '' || text.includes(filter) || catName.includes(filter)) {
+          prod.style.display = '';
+          showCategory = true;
+        } else {
+          prod.style.display = 'none';
+        }
+      });
+
+      cat.style.display = showCategory ? '' : 'none';
+    });
+  }
+
+  // Atualiza em tempo real enquanto digita
+  searchInput.addEventListener('input', () => {
+    filterProducts();
+  });
+
+  // Esconder dropdown se clicar fora
+  document.addEventListener('click', (e) => {
+    if (!e.target.closest('.hero-content')) {
+      searchDropdown.style.display = 'none';
+    }
+  });
+</script>
+<script>
+  const whatsappButton = document.getElementById('whatsappButton');
+
+  function vibrateButton() {
+    whatsappButton.classList.add('vibrate');
+    setTimeout(() => {
+      whatsappButton.classList.remove('vibrate');
+    }, 1000); // Remove a animação depois de 1 segundo
+  }
+
+  // Vibra a cada 10 segundos
+  setInterval(vibrateButton, 10000);
+</script>
+<script>
+  let currentIndex = 0;
+  const track = document.getElementById("carouselTrack");
+  const totalCards = track.children.length;
+
+  function moveSlide(direction) {
+    const visibleCards = window.innerWidth <= 480 ? 1 : window.innerWidth <= 768 ? 2 : 4;
+    currentIndex += direction;
+    if (currentIndex < 0) currentIndex = totalCards - visibleCards;
+    if (currentIndex > totalCards - visibleCards) currentIndex = 0;
+    const cardWidth = track.children[0].offsetWidth;
+    track.style.transform = `translateX(-${cardWidth * currentIndex}px)`;
+  }
+</script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const frases = [
+      "Escolha a Renty e transforme a gestão de ativos em uma vantagem competitiva.",
+      "Tercerização, manutenção, gestão e elétrica.",
+      "Locação full-service e soluções customizadas para otimizar empresas de todosos tamanhos e segmentos.",
+      "Soluções sustentáveis para empresas modernas.",
+      "Velocidade para a sua operação, acelere seus projetos com a Renty."
+    ];
+
+    function iniciarTroca() {
+      const div = document.getElementById("noticias");
+      if (!div) return; // não faz nada se a div ainda não existir
+
+      let index = 0;
+
+      setInterval(() => {
+        div.style.opacity = 0;
+
+        setTimeout(() => {
+          index = (index + 1) % frases.length;
+          div.textContent = frases[index];
+          div.style.opacity = 1;
+        }, 500);
+      }, 5000);
+    }
+
+    // Espera até a div existir no DOM
+    const observador = setInterval(() => {
+      if (document.getElementById("noticias")) {
+        clearInterval(observador);
+        iniciarTroca();
+      }
+    }, 100);
+  });
+</script>
+
+<script>
+  const modal = document.getElementById('productModal');
+  const selectionText = document.getElementById('selectionText');
+
+  function openModal() {
+    modal.classList.add('show');
+    modal.classList.remove('hide');
+    // Salva a data atual como último dia de exibição
+    localStorage.setItem('modal_last_shown', new Date().toDateString());
+  }
+
+  function closeModal() {
+    modal.classList.add('hide');
+    setTimeout(() => {
+      modal.classList.remove('show');
+    }, 300);
+  }
+
+  function selectOption(option) {
+    localStorage.setItem('product_view', option);
+    updateText(option);
+    closeModal();
+  }
+
+  function updateText(option) {
+    if (!selectionText) return;
+    if (option === 'business') {
+      selectionText.innerHTML = '<strong>Empresarial</strong> | Pessoal';
+    } else if (option === 'individual') {
+      selectionText.innerHTML = 'Empresarial | <strong>Pessoal</strong>';
+    } else {
+      selectionText.innerHTML = 'Empresarial | Pessoal';
+    }
+  }
+
+  window.onload = function () {
+    // Verifica se o modal já foi mostrado hoje
+    const lastShown = localStorage.getItem('modal_last_shown');
+    const today = new Date().toDateString();
+
+    if (lastShown !== today) {
+      openModal(); // Só abre se for um novo dia
+    }
+
+    // Atualiza o texto conforme opção salva, se houver
+    const savedOption = localStorage.getItem('product_view');
+    if (savedOption) {
+      updateText(savedOption);
+    }
+
+    // Permite reabrir o modal clicando no texto
+    if (selectionText) {
+      selectionText.style.cursor = 'pointer';
+      selectionText.onclick = () => {
+        openModal();
+      };
+    }
+  };
+</script>
+  <script>
+    fetch('footer.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('footer-container').innerHTML = data;
+      });
+  </script>
+ 
+</body>
+</html>

@@ -1,0 +1,843 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Renty Locações & Soluções em Manaus</title>
+<!--CSS-->
+<link rel="stylesheet" href="css/navbar.css">
+<link rel="stylesheet" href="css/home.css">
+<link rel="stylesheet" href="css/footer.css">
+<link rel="stylesheet" href="css/locacoes.css">
+<link rel="stylesheet" href="css/produtos.css">
+
+  <!-- SEO -->
+  <meta name="robots" content="index, follow">
+  <meta name="description" content="Empresa em Manaus especializada em terceirização, manutenção, gestão e elétrica. Descomplicamos as operações da sua empresa com locações de equipamentos sob medida.">
+  <meta name="keywords" content="Manaus, locações Manaus, aluguel de equipamentos em Manaus, manutenção em Manaus, elétrica em Manaus, terceirização Manaus, gestão operacional, Renty">
+  <meta name="author" content="Renty Locações">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Renty Locações & Soluções em Manaus">
+  <meta property="og:description" content="Soluções completas de manutenção, elétrica e locações em Manaus. Atendemos empresas com excelência e agilidade.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.rentysolutions.com.br">
+
+
+  <!-- Local Business (ajuda com SEO local) -->
+  <meta name="geo.region" content="BR-AM" />
+  <meta name="geo.placename" content="Manaus" />
+  <meta name="geo.position" content="-3.119027;-60.021731" />
+  <meta name="ICBM" content="-3.119027, -60.021731" />
+
+  <!-- Favicon e Styles -->
+  <link rel="icon" href="images/favicon.webp" type="image/x-icon">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter&family=Poppins:wght@500;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+  <div id="nav-container"></div>
+
+
+
+ <div class="locacao-parallax">
+    <img src="images/produtos-verde.webp" alt="Locações de Equipamentos Industriais Manaus Renty Solutions" id="parallax-img">
+    <div class="locacao-banner-texto">
+      <div class="locacao-titulos"> 
+        <p><a href="index.html">Home</a> / Produtos</p>
+        <h1>Produtos</h1>
+      </div>
+      <div class="locacao-voltar"><i class="bi bi-chevron-left"></i> <a href="index.html">VOLTAR</a></div>
+    </div>
+  </div>
+
+ <div class="locacao-container">
+  <p>
+    A <strong>Renty</strong> valoriza a capacidade das organizações de <strong>transformar aspirações em realidade</strong>,
+    sendo um <strong>parceiro estratégico</strong> que proporciona <strong>tempo</strong> e <strong>escalabilidade</strong> através de suas soluções.
+  </p>
+  <p>
+    Cuidamos de toda a <strong>logística dos equipamentos locados</strong>, entregando-os diretamente no ponto indicado.
+    Realizamos também a <strong>montagem</strong> e a <strong>instalação</strong>, deixando os equipamentos <strong>prontos para uso no seu PDV</strong>.
+  </p>
+ 
+ 
+</div>
+
+<div class="produtos">
+  <div class="produtos-filtro-e-lista">
+
+    <!-- Filtro Lateral -->
+    <aside class="produtos-filtro">
+      <h3>Filtrar por Categoria</h3>
+      <ul>
+        <li><button onclick="filtrarProdutos('todos')">Todos</button></li>
+        <li><button onclick="filtrarProdutos('construcao')">Construção Civil</button></li>
+        <li><button onclick="filtrarProdutos('energia')">Unidades de Energia</button></li>
+        <li><button onclick="filtrarProdutos('ti')">Tecnologia da Informação (TI)</button></li>
+        <li><button onclick="filtrarProdutos('food')">Food Service</button></li>
+      </ul>
+    </aside>
+
+    <!-- Lista de Produtos -->
+    <div class="produtos-lista">
+
+      <!-- PRODUTOS DE CONSTRUÇÃO -->
+          <div class="produto" data-categoria="construcao">
+        <div>
+        <img src="images/card (21).webp" alt="Máquina de Chapisco"></div>
+        <div>
+        <h4>Máquina de Chapisco</h4>
+        <p>Perfeita para aplicação uniforme de argamassa em paredes e fachadas.</p>
+          <div class="link-produto"><a href="maquina-de-chapisco.html">Ver Mais <i class="bi bi-arrow-bar-right"></i></a></div>
+      </div>
+        <div class="button-produto">  
+          <p>Locação a partir de</p>
+          <h3>Preços e Condições *</h3>
+          <p style="margin-top: -20px;">Por meio de cotação interna</p>
+          <br>
+        <button>Solicitar Orçamento</button></div>
+      </div>
+      <div class="produto" data-categoria="construcao">
+        <div>
+        <img src="images/card (20).webp" alt="Andaimes"></div>
+        <div>
+        <h4>Andaimes</h4>
+        <p>Estrutura essencial para trabalhos em altura com segurança e estabilidade.</p>
+       <div class="link-produto"><a href="andaimes.html">Ver Mais <i class="bi bi-arrow-bar-right"></i></a></div></div>
+        <div class="button-produto">  
+          <p>Locação a partir de</p>
+          <h3>Preços e Condições *</h3>
+          <p style="margin-top: -20px;">Por meio de cotação interna</p>
+          <br>
+        <button>Solicitar Orçamento</button></div>
+      </div>
+       <div class="produto" data-categoria="construcao">
+        <div>
+        <img src="images/card (22).webp" alt="Cortadora de Concreto"></div>
+        <div>
+        <h4>Cortadora de Concreto</h4>
+        <p>Indicada para cortes precisos em pisos e pavimentos de concreto.</p>
+       <div class="link-produto"><a href="cortadora-de-concreto.html">Ver Mais <i class="bi bi-arrow-bar-right"></i></a></div></div>
+       <div class="button-produto">  
+          <p>Locação a partir de</p>
+          <h3>Preços e Condições *</h3>
+          <p style="margin-top: -20px;">Por meio de cotação interna</p>
+          <br>
+        <button>Solicitar Orçamento</button></div>
+      </div>
+      <div class="produto" data-categoria="construcao">
+        <div>
+        <img src="images/card (23).webp" alt="Rompedor de Concreto"></div>
+        <div>
+        <h4>Rompedor de Concreto</h4>
+        <p>Utilizado para demolir estruturas de concreto com alta eficiência.</p>
+       <div class="link-produto"><a href="rompedor-de-concreto.html">Ver Mais <i class="bi bi-arrow-bar-right"></i></a></div></div>
+       <div class="button-produto">  
+          <p>Locação a partir de</p>
+          <h3>Preços e Condições *</h3>
+          <p style="margin-top: -20px;">Por meio de cotação interna</p>
+          <br>
+        <button>Solicitar Orçamento</button></div>
+      </div>
+      <div class="produto" data-categoria="construcao">
+        <div>
+        <img src="images/card (2).webp" alt="Compactador de Solo"></div>
+        <div>
+        <h4>Compactador de Solo</h4>
+        <p>Equipamento ideal para compactar o solo em obras e fundações.</p>
+       <div class="link-produto"><a href="compactador-de-solo.html">Ver Mais <i class="bi bi-arrow-bar-right"></i></a></div></div>
+        <div class="button-produto">  
+          <p>Locação a partir de</p>
+          <h3>Preços e Condições *</h3>
+          <p style="margin-top: -20px;">Por meio de cotação interna</p>
+          <br>
+        <button>Solicitar Orçamento</button></div>
+      </div>
+
+      <div class="produto" data-categoria="construcao">
+        <div>
+        <img src="images/card (1).webp" alt="Placa Vibratória"></div>
+        <div>
+        <h4>Placa Vibratória</h4>
+        <p>Utilizada para compactar superfícies granulares em pequenas e médias áreas.</p>
+       <div class="link-produto"><a href="placa-vibratoria.html">Ver Mais <i class="bi bi-arrow-bar-right"></i></a></div></div>
+       <div class="button-produto">  
+          <p>Locação a partir de</p>
+          <h3>Preços e Condições *</h3>
+          <p style="margin-top: -20px;">Por meio de cotação interna</p>
+          <br>
+        <button>Solicitar Orçamento</button></div>
+      </div>
+
+      <div class="produto" data-categoria="construcao">
+        <div>
+        <img src="images/card (9).webp" alt="Alisadora de Concreto"></div>
+        <div>
+        <h4>Alisadora de Concreto</h4>
+        <p>Indicada para o acabamento e nivelamento de pisos de concreto.</p>
+       <div class="link-produto"><a href="alisadora-de-concreto.html">Ver Mais <i class="bi bi-arrow-bar-right"></i></a></div></div>
+      <div class="button-produto">  
+          <p>Locação a partir de</p>
+          <h3>Preços e Condições *</h3>
+          <p style="margin-top: -20px;">Por meio de cotação interna</p>
+          <br>
+        <button>Solicitar Orçamento</button></div>
+      </div>
+
+      <div class="produto" data-categoria="construcao">
+        <div>
+        <img src="images/card (3).webp" alt="Pintura Airless"></div>
+        <div>
+        <h4>Aluguel de Pintura Airless</h4>
+        <p>Equipamento para pintura de superfícies com acabamento uniforme e rápido.</p>
+       <div class="link-produto"><a href="pintura-airless.html">Ver Mais <i class="bi bi-arrow-bar-right"></i></a></div></div>
+        <div class="button-produto">  
+          <p>Locação a partir de</p>
+          <h3>Preços e Condições *</h3>
+          <p style="margin-top: -20px;">Por meio de cotação interna</p>
+          <br>
+        <button>Solicitar Orçamento</button></div>
+      </div>
+
+      <div class="produto" data-categoria="construcao">
+        <div>
+        <img src="images/card (4).webp" alt="Betoneira"></div>
+        <div>
+        <h4>Betoneira</h4>
+        <p>Ideal para mistura de concreto de forma rápida e homogênea.</p>
+       <div class="link-produto"><a href="betoneira.html">Ver Mais <i class="bi bi-arrow-bar-right"></i></a></div></div>
+       <div class="button-produto">  
+          <p>Locação a partir de</p>
+          <h3>Preços e Condições *</h3>
+          <p style="margin-top: -20px;">Por meio de cotação interna</p>
+          <br>
+        <button>Solicitar Orçamento</button></div>
+      </div>
+
+      <div class="produto" data-categoria="construcao">
+        <div>
+        <img src="images/card (5).webp"  alt="Gerador de Energia"></div>
+        <div>
+        <h4>Aluguel de Gerador de Energia</h4>
+        <p>Essencial para fornecer energia elétrica em obras, eventos e situações de emergência.</p>
+       <div class="link-produto"><a href="gerador-de-energia.html">Ver Mais <i class="bi bi-arrow-bar-right"></i></a></div></div>
+        <div class="button-produto">
+        <button>Solicitar Orçamento</button></div>
+      </div>
+
+      <div class="produto" data-categoria="construcao">
+        <div>
+        <img src="images/card (6).webp" alt="Lixadeira de Parede e Teto"></div>
+        <div>
+        <h4>Aluguel de Lixadeira de Parede e Teto</h4>
+        <p>Ideal para lixamento de paredes, tetos e áreas amplas com agilidade.</p>
+       <div class="link-produto"><a href="lixadeira.html">Ver Mais <i class="bi bi-arrow-bar-right"></i></a></div></div>
+        <div class="button-produto">  
+          <p>Locação a partir de</p>
+          <h3>Preços e Condições *</h3>
+          <p style="margin-top: -20px;">Por meio de cotação interna</p>
+          <br>
+        <button>Solicitar Orçamento</button></div>
+      </div>
+
+      <div class="produto" data-categoria="construcao">
+        <div>
+        <img src="images/card (10).webp" alt="Quadro de Transferência"></div>
+        <div>
+        <h4>Aluguel de Quadro de Transferência</h4>
+        <p>Controla a distribuição de energia entre gerador e rede elétrica com segurança.</p>
+       <div class="link-produto"><a href="quadro-de-transferencia.html">Ver Mais <i class="bi bi-arrow-bar-right"></i></a></div></div>
+       <div class="button-produto">  
+          <p>Locação a partir de</p>
+          <h3>Preços e Condições *</h3>
+          <p style="margin-top: -20px;">Por meio de cotação interna</p>
+          <br>
+        <button>Solicitar Orçamento</button></div>
+      </div>
+
+      <!-- ENERGIA -->
+      <div class="produto" data-categoria="energia">
+        <div>
+        <img src="images/card (5).webp" alt="Gerador de Energia"></div>
+        <div>
+        <h4>Gerador de Energia</h4>
+        <p>Equipamento ideal para fornecer energia elétrica em obras e eventos.</p>
+       <div class="link-produto"><a href="gerador-de-energia.html">Ver Mais <i class="bi bi-arrow-bar-right"></i></a></div></div>
+        <div class="button-produto">  
+          <p>Locação a partir de</p>
+          <h3>Preços e Condições *</h3>
+          <p style="margin-top: -20px;">Por meio de cotação interna</p>
+          <br>
+        <button>Solicitar Orçamento</button></div>
+      </div>
+
+      <div class="produto" data-categoria="energia">
+        <div>
+        <img src="images/card (7).webp" alt="Quadro de Transferência"></div>
+        <div>
+        <h4>Quadro de Transferência</h4>
+        <p>Controla a distribuição de energia entre gerador e rede elétrica com segurança.</p>
+       <div class="link-produto"><a href="quadro-de-transferencia.html">Ver Mais <i class="bi bi-arrow-bar-right"></i></a></div></div>
+        <div class="button-produto">  
+          <p>Locação a partir de</p>
+          <h3>Preços e Condições *</h3>
+          <p style="margin-top: -20px;">Por meio de cotação interna</p>
+          <br>
+        <button>Solicitar Orçamento</button></div>
+      </div>
+
+      <div class="produto" data-categoria="energia">
+        <div>
+        <img src="images/card (11).webp" alt="NoBreak"></div>
+        <div>
+        <h4>Aluguel de NoBreak</h4>
+        <p>Equipamento que garante o fornecimento contínuo de energia elétrica.</p>
+       <div class="link-produto"><a href="nobreak.html">Ver Mais <i class="bi bi-arrow-bar-right"></i></a></div></div>
+        <div class="button-produto">  
+          <p>Locação a partir de</p>
+          <h3>Preços e Condições *</h3>
+          <p style="margin-top: -20px;">Por meio de cotação interna</p>
+          <br>
+        <button>Solicitar Orçamento</button></div>
+      </div>
+
+      <div class="produto" data-categoria="energia">
+        <div>
+        <img src="images/card (12).webp" alt="Torre de Energia"></div>
+        <div>
+        <h4>Aluguel de Torre de Energia Manaus</h4>
+        <p>Locação de torre para fornecimento de energia temporário.</p>
+       <div class="link-produto"><a href="torre-de-energia.html">Ver Mais <i class="bi bi-arrow-bar-right"></i></a></div></div>
+       <div class="button-produto">  
+          <p>Locação a partir de</p>
+          <h3>Preços e Condições *</h3>
+          <p style="margin-top: -20px;">Por meio de cotação interna</p>
+          <br>
+        <button>Solicitar Orçamento</button></div>
+      </div>
+
+      <!-- TI -->
+      <div class="produto" data-categoria="ti">
+        <div>
+        <img src="images/card (13).webp" alt="Dispositivos Móveis"></div>
+        <div>
+        <h4>Dispositivos Móveis</h4>
+        <p>Locação de celulares, tablets e outros dispositivos móveis para uso corporativo e pessoal.</p>
+       <div class="link-produto"><a href="dispositivos-moveis.html">Ver Mais <i class="bi bi-arrow-bar-right"></i></a></div></div>
+       <div class="button-produto">  
+          <p>Locação a partir de</p>
+          <h3>Preços e Condições *</h3>
+          <p style="margin-top: -20px;">Por meio de cotação interna</p>
+          <br>
+        <button>Solicitar Orçamento</button></div>
+      </div>
+
+      <div class="produto" data-categoria="ti">
+        <div>
+        <img src="images/card (14).webp" alt="Notebooks"></div>
+        <div>
+        <h4>Aluguel de Computadores e Notebooks em Manaus</h4>
+        <p>Ideal para empresas que buscam flexibilidade e mobilidade.</p>
+       <div class="link-produto"><a href="computadores-e-notebooks.html">Ver Mais <i class="bi bi-arrow-bar-right"></i></a></div></div>
+       <div class="button-produto">  
+          <p>Locação a partir de</p>
+          <h3>Preços e Condições *</h3>
+          <p style="margin-top: -20px;">Por meio de cotação interna</p>
+          <br>
+        <button>Solicitar Orçamento</button></div>
+      </div>
+
+      <div class="produto" data-categoria="ti">
+        <div>
+        <img src="images/card (16).webp" alt="Impressão Corporativa"></div>
+        <div>
+        <h4>Serviços de Impressão Corporativa em Manaus</h4>
+        <p>Serviços e equipamentos de impressão ideais para demandas corporativas de documentos.</p>
+       <div class="link-produto"><a href="impressao.html">Ver Mais <i class="bi bi-arrow-bar-right"></i></a></div></div>
+       <div class="button-produto">  
+          <p>Locação a partir de</p>
+          <h3>Preços e Condições *</h3>
+          <p style="margin-top: -20px;">Por meio de cotação interna</p>
+          <br>
+        <button>Solicitar Orçamento</button></div>
+      </div>
+
+      <div class="produto" data-categoria="ti">
+        <div>
+        <img src="images/card (15).webp" alt="Hardware Corporativo"></div>
+        <div>
+        <h4>Hardware Corporativo para Infraestrutura de TI em Manaus</h4>
+        <p>Infraestrutura de TI com servidores, roteadores e soluções para ambientes empresariais.</p>
+       <div class="link-produto"><a href="hardware.html">Ver Mais <i class="bi bi-arrow-bar-right"></i></a></div></div>
+       <div class="button-produto">  
+          <p>Locação a partir de</p>
+          <h3>Preços e Condições *</h3>
+          <p style="margin-top: -20px;">Por meio de cotação interna</p>
+          <br>
+        <button>Solicitar Orçamento</button></div>
+      </div>
+
+      <!-- FOOD SERVICE -->
+      <div class="produto" data-categoria="food">
+        <div>
+        <img src="images/card (17).webp" alt="Forno Industrial"></div>
+        <div>
+        <h4>Forno Industrial</h4>
+        <p>Locação de fornos industriais para preparo eficiente em restaurantes e empresas.</p>
+       <div class="link-produto"><a href="forno-industrial.html">Ver Mais <i class="bi bi-arrow-bar-right"></i></a></div></div>
+        <div class="button-produto">  
+          <p>Locação a partir de</p>
+          <h3>Preços e Condições *</h3>
+          <p style="margin-top: -20px;">Por meio de cotação interna</p>
+          <br>
+        <button>Solicitar Orçamento</button></div>
+      </div>
+
+      <div class="produto" data-categoria="food">
+        <div>
+        <img src="images/card (18).webp" alt="Mesa Seca de Inox"></div>
+        <div>
+        <h4>Aluguel de Mesa Seca de Inox para Restaurantes em Manaus</h4>
+        <p>Ideal para restaurantes e empresas que buscam organização e higiene na manipulação de alimentos.</p>
+       <div class="link-produto"><a href="mesa-seca.html">Ver Mais <i class="bi bi-arrow-bar-right"></i></a></div></div>
+     <div class="button-produto">  
+          <p>Locação a partir de</p>
+          <h3>Preços e Condições *</h3>
+          <p style="margin-top: -20px;">Por meio de cotação interna</p>
+          <br>
+        <button>Solicitar Orçamento</button></div>
+      </div>
+
+      <div class="produto" data-categoria="food">
+        <div>
+        <img src="images/card (24).webp" alt="Refrigeração Industrial"></div>
+        <div>
+        <h4>Aluguel de Refrigeração Industrial para Restaurantes em Manaus</h4>
+        <p>Ideal para manter a temperatura adequada de alimentos e bebidas em grandes quantidades.</p>
+       <div class="link-produto"><a href="refrigeracao.html">Ver Mais <i class="bi bi-arrow-bar-right"></i></a></div></div>
+       <div class="button-produto">  
+          <p>Locação a partir de</p>
+          <h3>Preços e Condições *</h3>
+          <p style="margin-top: -20px;">Por meio de cotação interna</p>
+          <br>
+        <button>Solicitar Orçamento</button></div>
+      </div>
+
+      <div class="produto" data-categoria="food">
+        <div>
+        <img src="images/card (19).webp" alt="Máquina de Corte de Carne"></div>
+        <div>
+        <h4>Locação de Máquina de Corte de Carne para Restaurantes em Manaus</h4>
+        <p>Equipamento para corte preciso de carnes, garantindo qualidade e rendimento.</p>
+       <div class="link-produto"><a href="maquina-de-corte.html">Ver Mais <i class="bi bi-arrow-bar-right"></i></a></div></div>
+       <div class="button-produto">  
+          <p>Locação a partir de</p>
+          <h3>Preços e Condições *</h3>
+          <p style="margin-top: -20px;">Por meio de cotação interna</p>
+          <br>
+        <button>Solicitar Orçamento</button></div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+<script>
+ import React, { useState } from "react";
+
+const productsData = [
+  {
+    name: "Compactador de Solo",
+    category: "Construção Civil",
+    description: "Equipamento ideal para compactar o solo em obras e fundações.",
+    image: "https://via.placeholder.com/100?text=Compactador"
+  },
+  {
+    name: "Placa Vibratória",
+    category: "Construção Civil",
+    description: "Utilizada para compactar superfícies granulares em pequenas e médias áreas.",
+    image: "https://via.placeholder.com/100?text=Placa"
+  },
+  {
+    name: "Alisadora de Concreto",
+    category: "Construção Civil",
+    description: "Indicada para o acabamento e nivelamento de pisos de concreto.",
+    image: "https://via.placeholder.com/100?text=Alisadora"
+  },
+  {
+    name: "Pintura Airless",
+    category: "Construção Civil",
+    description: "Equipamento para pintura de superfícies com acabamento uniforme e rápido.",
+    image: "https://via.placeholder.com/100?text=Pintura"
+  },
+  {
+    name: "Betoneira",
+    category: "Construção Civil",
+    description: "Ideal para mistura de concreto de forma rápida e homogênea.",
+    image: "https://via.placeholder.com/100?text=Betoneira"
+  },
+  {
+    name: "Gerador de Energia",
+    category: "Unidades de Energia",
+    description: "Equipamento ideal para fornecer energia elétrica em obras e eventos.",
+    image: "https://via.placeholder.com/100?text=Gerador"
+  },
+  {
+    name: "Quadro de Transferência",
+    category: "Unidades de Energia",
+    description: "Controla a distribuição de energia entre gerador e rede elétrica com segurança.",
+    image: "https://via.placeholder.com/100?text=Quadro"
+  },
+  {
+    name: "NoBreak",
+    category: "Unidades de Energia",
+    description: "Equipamento que garante o fornecimento contínuo de energia elétrica.",
+    image: "https://via.placeholder.com/100?text=NoBreak"
+  },
+  {
+    name: "Torre de Energia",
+    category: "Unidades de Energia",
+    description: "Locação de torre para fornecimento de energia temporário.",
+    image: "https://via.placeholder.com/100?text=Torre"
+  },
+  {
+    name: "Dispositivos Móveis",
+    category: "T.I.",
+    description: "Locação de celulares, tablets e outros dispositivos móveis para uso corporativo e pessoal.",
+    image: "https://via.placeholder.com/100?text=Dispositivos"
+  },
+  {
+    name: "Computadores e Notebooks",
+    category: "T.I.",
+    description: "Ideal para empresas que buscam flexibilidade e mobilidade.",
+    image: "https://via.placeholder.com/100?text=Computadores"
+  },
+  {
+    name: "Impressão",
+    category: "T.I.",
+    description: "Serviços e equipamentos de impressão ideais para demandas corporativas de documentos.",
+    image: "https://via.placeholder.com/100?text=Impressao"
+  },
+  {
+    name: "Hardware Corporativo",
+    category: "T.I.",
+    description: "Infraestrutura de TI com servidores, roteadores e soluções para ambientes empresariais.",
+    image: "https://via.placeholder.com/100?text=Hardware"
+  },
+  {
+    name: "Forno Industrial",
+    category: "Food Service",
+    description: "Locação de fornos industriais para preparo eficiente em restaurantes e empresas.",
+    image: "https://via.placeholder.com/100?text=Forno"
+  },
+  {
+    name: "Mesa Seca de Inox",
+    category: "Food Service",
+    description: "Ideal para restaurantes e empresas que buscam organização e higiene na manipulação de alimentos.",
+    image: "https://via.placeholder.com/100?text=Mesa"
+  },
+  {
+    name: "Refrigeração Industrial",
+    category: "Food Service",
+    description: "Ideal para manter a temperatura adequada de alimentos e bebidas em grandes quantidades.",
+    image: "https://via.placeholder.com/100?text=Refrigeracao"
+  },
+  {
+    name: "Máquina de Corte de Carne",
+    category: "Food Service",
+    description: "Equipamento para corte preciso de carnes, garantindo qualidade e rendimento.",
+    image: "https://via.placeholder.com/100?text=Maquina"
+  }
+];
+
+const categories = [
+  "Todos",
+  "Construção Civil",
+  "Unidades de Energia",
+  "T.I.",
+  "Food Service"
+];
+
+export default function ProductFilter() {
+  const [selectedCategory, setSelectedCategory] = useState("Todos");
+
+  const filteredProducts =
+    selectedCategory === "Todos"
+      ? productsData
+      : productsData.filter(product => product.category === selectedCategory);
+
+  return (
+    <div className="produtos">
+      <div className="produtos-filtro-e-lista">
+        <aside className="produtos-filtro">
+          <h3>Filtrar por Categoria</h3>
+          <ul>
+            {categories.map(category => (
+              <li key={category}>
+                <button
+                  onClick={() => setSelectedCategory(category)}
+                  style={{
+                    fontWeight: selectedCategory === category ? "bold" : "normal",
+                    textDecoration: selectedCategory === category ? "underline" : "none",
+                    cursor: "pointer",
+                    background: "none",
+                    border: "none",
+                    color: "#007bff",
+                    fontSize: "15px",
+                    padding: "5px 0",
+                    textAlign: "left",
+                    width: "100%"
+                  }}
+                >
+                  {category}
+                </button>
+              </li>
+            ))}
+          </ul>
+        </aside>
+
+        <div className="produtos-lista">
+          {filteredProducts.map((product, index) => (
+            <div key={index} className="produto" style={{display: "flex", alignItems: "center", gap: "20px", borderBottom: "1px solid #eee", paddingBottom: "10px"}}>
+              <img
+                src={product.image}
+                alt={product.name}
+                style={{width: "100px", height: "100px", objectFit: "cover", borderRadius: "6px", flexShrink: 0}}
+              />
+              <div style={{flex: 1}}>
+                <h4 style={{margin: 0, marginBottom: "5px", fontSize: "18px", color: "#333"}}>{product.name}</h4>
+                <p style={{margin: 0, color: "#666", fontSize: "14px"}}>{product.description}</p>
+              </div>
+              <div style={{flexShrink: 0}}>
+                <button
+                  style={{
+                    backgroundColor: "#007bff",
+                    border: "none",
+                    color: "white",
+                    padding: "10px 16px",
+                    borderRadius: "6px",
+                    cursor: "pointer",
+                    fontWeight: "bold",
+                    transition: "background-color 0.3s ease"
+                  }}
+                  onMouseOver={e => (e.currentTarget.style.backgroundColor = "#0056b3")}
+                  onMouseOut={e => (e.currentTarget.style.backgroundColor = "#007bff")}
+                >
+                  Alugar
+                </button>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+</script>
+
+
+
+
+<br><br>
+<div class="locacoes-help">
+  <div class="locacoes-help-content">
+    <h1>Dúvidas sobre qual equipamento alugar?</h1>
+    <p>A gente ajuda!</p>
+    <a href="https://web.whatsapp.com/send?phone=5592985771111&text=" class="locacoes-help-btn">CLIQUE PARA ACESSAR</a>
+  </div>
+</div>
+
+
+
+
+ <div id="footer-container"></div>
+
+<!-- Modal de Orçamento -->
+<div id="modal-orcamento" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="fecharModal()">&times;</span>
+      <!-- NOVO: Exibição do produto selecionado -->
+<div class="modal-produto-selecionado">
+    <div id="produto-selecionado" >
+      <img id="modal-produto-imagem" src="" alt="" >
+      <div>
+      <p>Produto Selecionado</p>
+      <h3 id="modal-produto-nome" ></h3></div>
+    </div></div>
+
+    <h2>Solicite a sua cotação agora mesmo</h2>
+    <p>Preencha os dados abaixo que em alguns instantes entraremos em contato</p>
+    <form>
+      <label for="nome"></label>
+      <input type="text" id="nome" name="nome" required placeholder="Nome*">
+ <label for="telefone"></label>
+      <input type="tel" id="telefone" name="telefone" required placeholder="Telefone (com DDD)*" pattern="\(\d{2}\) \d{4,5}-\d{4}">
+
+      <label for="email"></label>
+      <input type="email" id="email" name="email" required placeholder="E-mail*">
+
+      <label for="mensagem"></label>
+      <textarea id="mensagem" name="mensagem" rows="4"  placeholder="Descreva aqui seu interesse em locação..."></textarea>
+
+      <button type="submit">Enviar</button>
+    </form>
+  </div>
+</div>
+<script>
+  const botoesOrcamento = document.querySelectorAll('.produto button');
+  const modal = document.getElementById('modal-orcamento');
+  const modalNome = document.getElementById('modal-produto-nome');
+  const modalImagem = document.getElementById('modal-produto-imagem');
+
+  botoesOrcamento.forEach(botao => {
+    botao.addEventListener('click', () => {
+      const produto = botao.closest('.produto');
+      const nomeProduto = produto.querySelector('h4').innerText;
+      const imagemProduto = produto.querySelector('img').src;
+      const altProduto = produto.querySelector('img').alt;
+
+      modalNome.innerText = nomeProduto;
+      modalImagem.src = imagemProduto;
+      modalImagem.alt = altProduto;
+
+      modal.style.display = 'block';
+    });
+  });
+
+  function fecharModal() {
+    modal.style.display = 'none';
+  }
+
+  window.onclick = function(event) {
+    if (event.target === modal) {
+      modal.style.display = 'none';
+    }
+  }
+</script>
+
+
+
+<script>
+  // Carrega a navbar
+  fetch('navbar.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('nav-container').innerHTML = data;
+
+      // Agora que a navbar foi carregada, adicione os eventos
+      const hamburger = document.getElementById('hamburger');
+      const mobileMenu = document.getElementById('mobileMenu');
+
+      if (hamburger && mobileMenu) {
+        hamburger.addEventListener('click', () => {
+          mobileMenu.style.display = mobileMenu.style.display === 'flex' ? 'none' : 'flex';
+        });
+      }
+    });
+</script>
+
+ 
+
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const frases = [
+      "Escolha a Renty e transforme a gestão de ativos em uma vantagem competitiva.",
+      "Tercerização, manutenção, gestão e elétrica.",
+      "Locação full-service e soluções customizadas para otimizar empresas de todosos tamanhos e segmentos.",
+      "Soluções sustentáveis para empresas modernas.",
+      "Velocidade para a sua operação, acelere seus projetos com a Renty."
+    ];
+
+    function iniciarTroca() {
+      const div = document.getElementById("noticias");
+      if (!div) return; // não faz nada se a div ainda não existir
+
+      let index = 0;
+
+      setInterval(() => {
+        div.style.opacity = 0;
+
+        setTimeout(() => {
+          index = (index + 1) % frases.length;
+          div.textContent = frases[index];
+          div.style.opacity = 1;
+        }, 500);
+      }, 5000);
+    }
+
+    // Espera até a div existir no DOM
+    const observador = setInterval(() => {
+      if (document.getElementById("noticias")) {
+        clearInterval(observador);
+        iniciarTroca();
+      }
+    }, 100);
+  });
+</script>
+
+
+  <script>
+    fetch('footer.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('footer-container').innerHTML = data;
+      });
+  </script>
+ 
+
+<a href="https://web.whatsapp.com/send?phone=5592985771111&text=" target="_blank" class="whatsapp-button" id="whatsappButton">
+  <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" />
+</a>
+<script>
+  function filtrarProdutos(categoria) {
+    const produtos = document.querySelectorAll('.produto');
+
+    produtos.forEach(produto => {
+      const categoriaProduto = produto.getAttribute('data-categoria');
+
+      if (categoria === 'todos' || categoriaProduto === categoria) {
+        produto.style.display = 'flex';
+      } else {
+        produto.style.display = 'none';
+      }
+    });
+  }
+
+  // Mostrar todos os produtos ao carregar a página
+  document.addEventListener('DOMContentLoaded', () => {
+    filtrarProdutos('todos');
+  });
+</script>
+<button id="btn-topo" aria-label="Voltar para o topo"><i class="bi bi-arrow-up-short"></i></button>
+
+<script>
+  const btnTopo = document.getElementById('btn-topo');
+
+  window.addEventListener('scroll', () => {
+    const scrollPosition = window.scrollY || document.documentElement.scrollTop;
+    const halfPage = document.documentElement.scrollHeight / 2;
+
+    if (scrollPosition > halfPage) {
+      btnTopo.classList.add('show');
+    } else {
+      btnTopo.classList.remove('show');
+    }
+  });
+
+  btnTopo.addEventListener('click', () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  });
+</script>
+
+</body>
+</html>

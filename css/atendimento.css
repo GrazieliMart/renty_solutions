@@ -1,0 +1,173 @@
+.atendimento {
+    display: flex
+;
+    flex-wrap: wrap;
+    gap: 40px;
+    padding: 40px 300px;
+ 
+}
+.atendimento-info {
+  flex: 1;
+  min-width: 300px;
+}
+.atendimento-info span{
+    color: #00505a;
+}.atendimento-info #span2{
+    color: #ff6600;
+}
+
+.atendimento-info h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.atendimento-info p {
+  margin-bottom: 20px;
+}
+
+.atendimento-contatos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.contato-box {
+  border: 1px solid #ccc;
+  padding: 15px;
+  border-radius: 6px;
+  flex: 1 1 200px;
+}
+
+.contato-box strong {
+  display: block;
+  color: #00505a;
+  font-size: 1rem;
+  margin-bottom: 5px;
+}
+.contato-box a:hover{
+    color: #00505a;
+    transition: 0.2s;
+}
+.atendimento-form {
+  flex: 1;
+  min-width: 300px;
+  background-color: #f9f9f9;
+  padding: 60px;
+  border-radius: 8px;
+}
+
+.atendimento-form h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.atendimento-form p {
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.atendimento-form input,
+.atendimento-form select,
+.atendimento-form textarea {
+  display: block;
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 20px;
+   font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  border: 1px solid #cccccc00;
+  background-color: #e7e7e7;
+  border-radius: 0px;
+}
+.atendimento-form button {
+    margin-top: 25px;
+    padding: 12px 20px;
+    margin-left: 46%;
+    font-size: 1.1rem;
+    border: none;
+    background-color: #FF5722;
+    color: white;
+    left: 50%;
+    border-radius: 6px;
+    cursor: pointer;
+}
+.atendimento-select{
+    width: 107% !important;
+}
+
+  .atendimento-form button:hover {
+    background-color: #F0542D;
+  }
+
+.atendimento-upload {
+  border: 2px dashed #aaa;
+  padding: 30px;
+  text-align: center;
+  color: #555;
+  background-color: #fff;
+  border-radius: 8px;
+}
+@media screen and (max-width: 1024px) {
+  .atendimento {
+    display: flex
+;
+    flex-wrap: wrap;
+    gap: 40px;
+    padding: 40px 30px;
+}.atendimento-form {
+    flex: 1;
+    min-width: fit-content;
+    background-color: #f9f9f9;
+    padding: 60px;
+    border-radius: 8px;
+}.atendimento-form input, .atendimento-form select, .atendimento-form textarea {
+    display: block;
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 20px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.6rem;
+    border: 1px solid #cccccc00;
+    background-color: #e7e7e7;
+    border-radius: 0px;
+}.atendimento-select {
+    width: 115% !important;
+}.atendimento-form button {
+    margin-top: 25px;
+    padding: 12px 20px;
+    margin-left: 0%;
+    font-size: 1.1rem;
+    border: none;
+    background-color: #FF5722;
+    color: white;
+    left: 50%;
+    border-radius: 6px;
+    cursor: pointer;
+}.hero {
+    position: relative;
+    width: 100%;
+    height: 30vh !important
+
+;
+    overflow: hidden;
+    background-color: black;
+    display: flex
+;
+    align-items: center;
+    justify-content: center;
+}.hero-content {
+        position: relative;
+        z-index: 1;
+        color: white;
+        text-align: center;
+        width: 100%;
+        margin-top: 75px !important;
+        display: flex
+;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+}

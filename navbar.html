@@ -1,0 +1,131 @@
+  <body>
+
+    <!-- Top bar -->
+    <nav>
+      <div class="top-bar">
+        <div>Quer contratar diretamente? <strong style="color: #F0542D;">+55 (92) 98577-1111</strong></div>
+        <div id="noticias">Locações e soluções customizadas que otimizam sua operação</div>
+        <div>
+          <span id="selectionText">Empresarial | Pessoal</span> &nbsp; Segunda a Sexta | 08h30 - 17h30
+        </div>
+      </div>
+
+      <!-- Orange bar -->
+      <div class="orange-bar">
+        <img src="images/logo-white-orange.webp" alt="Logo" />
+        <div class="icons">
+          <p>Faça uma cotação</p>
+          <p id="telefone">+55 (92) 98577-1111</p>
+          <p>contato@rentysolutions.com.br</p>
+        </div>
+      </div>
+
+      <!-- Mobile Nav -->
+      <div class="mobile-nav">
+        <div class="mobile-nav-header">
+          <img src="images/logo-white-orange.webp" alt="Logo" class="mobile-logo" />
+          <button class="hamburger" id="hamburger">&#9776;</button>
+        </div>
+        <div class="mobile-menu" id="mobileMenu">
+          <a href="index.html">Início</a>
+          <a href="locacoes.html">Locações</a>
+          <a href="produtos.html">Produtos</a>
+
+          <a href="sobre.html">Sobre</a>
+          <a href="atendimento.html" class="cta-btn">Cotação Personalizada</a>
+        </div>
+      </div>
+
+      <!-- Bottom nav -->
+      <div class="bottom-nav">
+        <div>
+          <div class="dropdown-container">
+            <button class="dropdown-btn">Produtos <i class="bi bi-chevron-down"></i></button>
+            <div class="dropdown-content">
+              <div class="menu-section">
+                <h4 id="h4-titulo">O que você gostaria de contratar?</h4>
+                <ul>
+                  <li><a href="produtos.html">Construção Civil</a></li>
+                  <li><a href="produtos.html">Serviços Industriais</a></li>
+                  <li><a href="produtos.html">Unidades de Energia</a></li>
+                  <li><a href="produtos.html">Industria</a></li>
+                  <li><a href="produtos.html">T.I</a></li>
+                  <li><a href="produtos.html">Food Service</a></li>
+                </ul>
+              </div>
+              <div>
+                <h4>Construção Civil</h4>
+                <ul>
+        <li><a href="andaimes.html">Andaimes e Escoras metálicas</a></li>
+        <li><a href="betoneira.html">Betoneira</a></li>
+        <li><a href="compactador-de-solo.html">Compactador de Solo</a></li>
+        <li><a href="lixadeira.html">Lixadeira de Concreto</a></li>
+        <li><a href="maquina-de-chapisco.html">Máquina de Chapisco</a></li>
+        <li><a href="placa-vibratoria.html">Placa Vibratória</a></li>
+        <li><a href="pintura-airless.html">Pintura Airless</a></li>
+        <li><a href="rompedor-de-concreto.html">Rompedor de Concreto</a></li>
+        <li><a href="alisadora-de-concreto.html">Alisadora de Concreto</a></li>
+      </ul>
+              </div>
+              <div>
+                <h4>Food Service</h4>
+                <ul>
+        <li><a href="forno-industrial.html">Forno Industrial</a></li>
+        <li><a href="mesa-seca.html">Mesa seca Inox</a></li>
+        <li><a href="refrigeracao.html">Refrigeração</a></li>
+        <li><a href="corte-de-carne.html">Máquina de corte de carnes</a></li>
+      </ul>
+              </div>
+               <div>
+                <h4>Unidades de Energia</h4>
+                <ul>
+        <li><a href="gerador-de-energia.html">Gerador de energia</a></li>
+        <li><a href="quadro-de-transferencia.html">Quadro de Transferência</a></li>
+        <li><a href="nobreak.html">Nobreaks</a></li>
+        <li><a href="torre-de-energia.html">Torre de Energia</a></li>
+      </ul>
+              </div>
+
+              <div>
+                <h4>T.I.</h4>
+                 <ul>
+     
+        <li><a href="computadores-e-notebooks.html">Desktops e Notebooks</a></li>
+        <li><a href="dispositivos-moveis.html">Tablets e Celulares</a></li>
+    
+        <li><a href="impressao.html">Impressoras e Multifuncionais</a></li>
+        <li><a href="hardware.html">Hardware</a></li>
+       
+      </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="a-links-nav">
+          <a href="index.html" class="menu__link">Ínicio</a>
+          <a href="locacoes.html" class="menu__link">Locações</a>
+          <a href="produtos.html" class="menu__link">Produtos</a>
+          <a href="sobre.html" class="menu__link">Sobre</a>
+
+        </div>
+
+        <div class="filial">
+          <a href="atendimento.html">
+            <button id="openFilialModal">Cotação Personalizada <i class="bi bi-arrow-right"></i></button>
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Script para abrir/fechar menu mobile -->
+ <script>
+    const hamburger = document.getElementById("hamburger");
+    const mobileMenu = document.getElementById("mobileMenu");
+
+    hamburger.addEventListener("click", () => {
+      mobileMenu.classList.toggle("active");
+    });
+  </script>
+
+  </body>
