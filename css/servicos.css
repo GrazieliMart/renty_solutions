@@ -1,0 +1,222 @@
+ .servicos-container {
+      position: relative;
+      max-width: 1000px;
+      margin: 50px auto;
+      padding: 0 40px;
+    }
+
+    .servicos-slides-wrapper {
+      overflow: hidden; /* impede a rolagem horizontal */
+    }
+
+    .servicos-slides {
+      display: flex;
+      gap: 20px;
+      width: fit-content;
+      transition: transform 0.4s ease;
+    }
+
+    .servicos-item {
+      width: 250px;
+      flex: 0 0 auto;
+      background: #f9f9f9;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      padding: 20px;
+      text-align: left;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+    .servicos-item i{
+        font-size: 8px;
+    }
+
+   .servicos-item img {
+    width: 130px;
+    height: 130px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+    .servicos-item h2 {
+      margin: 10px 0 5px;
+      font-size: 1.2rem;
+    }
+
+    .servicos-item p {
+      font-size: 0.95rem;
+      color: #555;
+    }
+
+    .servicos-navegacao {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 2rem;
+      background: rgba(255, 255, 255, 0);
+      border: none;
+      cursor: pointer;
+      padding: 5px 10px;
+        border-radius: 50px;
+      z-index: 10;
+    }
+    .servicos-navegacao:hover{
+        color: #F0542D;
+    }
+    .beneficios-servicos{
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      color: #ffffff;
+      padding: 40px;
+      background-color: #00505a;
+    }
+    .servicos-item:hover{
+        color: #fff;
+        cursor: pointer;
+        transition: 0.2s;
+        background-color: #00505a;
+    }
+    .servicos-item:hover p {
+      font-size: 0.95rem;
+      color: #ffffff;
+    }
+    .servicos-item:hover i {
+     
+      color: #F0542D;
+    }
+    .servicos-item:hover img{
+        border-radius: 50%;
+        border: 3px solid #F0542D;
+    }
+    .servicos-item img{
+        border-radius: 50%;
+        border: 3px solid #f0542d00;
+    }
+    .servicos-anterior {
+      left: 0;
+      margin-left: -30px;
+    }
+
+    .servicos-proximo {
+      right: 0;
+      margin-right: -30px;
+    }
+
+   .servicos-div-2 {
+    display: flex
+;
+    flex-wrap: nowrap;
+    background: #00505a;
+    gap: 20px;
+    justify-content: center;
+   padding: 20px;
+}
+
+.servicos-box {
+    display: flex
+;
+
+    color: #fff;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+    flex: 1;
+    max-width: 220px;
+}
+#text1 i{
+transition: 0.2s;
+padding: 10px 15px;
+border-radius: 50px;
+}
+#text2 i{
+transition: 0.2s;
+padding: 10px 15px;
+border-radius: 50px;
+}
+#text1:hover i{
+background-color: #fff;
+color: #ff6600;
+padding: 10px 15px;
+border-radius: 50px;
+}
+#text1:hover{
+  background-color: #05292c;
+}
+#text2:hover i{
+background-color: #fff;
+color: #074349;
+padding: 10px 15px;
+border-radius: 50px;
+}
+#text2:hover{
+  background-color: #ff6600;
+}
+#text1 {
+    display: flex
+;background-color: #074349;
+    color: #fff;
+    flex-direction: column;
+    padding-left: 20px;
+      padding-right: 20px;
+    border-radius: 5px;
+    align-items: center;
+    text-align: left;
+    flex: 1;
+    max-width: 220px;
+}
+#text2 {
+    display: flex
+;background-color: #19744e;
+    color: #fff;
+    flex-direction: column;
+    padding-left: 20px;
+      padding-right: 20px;
+    border-radius: 5px;
+    align-items: center;
+    text-align: left;
+    flex: 1;
+    max-width: 220px;
+}
+  .servicos-box img {
+    width: 220px;
+    height: 240px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+
+  .servicos-box .icon {
+    font-size: 20px;
+    color: #00aa55;
+    margin-bottom: 10px;
+  
+  }
+
+  .servicos-box h2 {
+    font-size: 1.1rem;
+    margin: 10px 0 5px;
+  }
+
+.servicos-box p {
+    font-size: 0.95rem;
+    color: #ffffff;
+} 
+  #image-logo img{
+    width: 130px;
+    margin-bottom: -50px;
+  }
+  .servicos-item button{
+     padding: 10px 16px;
+  background-color: #ff6600;
+  border: none;
+  font-size: 20px;
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.servicos-item button:hover {
+  background-color: #b64900;
+}
+  

@@ -1,0 +1,203 @@
+/* HERO COM IMAGEM DE FUNDO PARALLAX */
+.sustentabilidade-hero {
+  background-image: url('../images/back-sustentabilidade.webp'); /* Caminho da imagem */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* <- Parallax aqui */
+height: 400px;
+  padding: 100px 20px;
+  border-bottom: 8px solid #00505a;
+  color: white;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+.sustentabilidade-align{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.conteudo-sustentabilidade{
+    margin-top: 200px;
+    display: grid;
+}
+.sustentabilidade-titulo h1 {
+    font-size: 2.8em;
+    margin: 0;
+    font-weight: bold;
+}
+    .sustentabilidade-titulo,
+    .sustentabilidade-subtitulo {
+    
+ 
+      display: inline-block;
+    }
+    .align-button{
+display: flex;
+justify-content: center;
+justify-content: center;
+
+    }
+  .sustentabilidade-titulo img {
+    height: 50px;
+    margin-top: -200px;
+}
+  @keyframes flutuar {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px); /* sobe 10px */
+  }
+}
+.sustentabilidade-botao-hero a{
+  color: #F0542D;
+}
+.sustentabilidade-botao-hero:hover a{
+  color: #ffffff;
+}
+.sustentabilidade-botao-hero {
+  background-color: #ffffff;
+  color: #F0542D;
+  border: none;
+  width: 10%;
+  border-radius: 50px;
+  padding: 15px 0px;
+  font-size: 30px;
+  margin-top: 20px;
+  cursor: pointer;
+  animation: flutuar 2s ease-in-out infinite; /* ← aqui está a animação */
+  transition: transform 0.3s ease;
+   transition: 0.2s;
+}
+.sustentabilidade-botao-hero:hover{
+    background-color: #F0542D;
+    transition: 0.2s;
+    color: #fff;
+}
+    .align-top{
+        padding-top: 100px;
+    }
+    /* DESTAQUE COM VÍDEO */
+    .sustentabilidade-destaque {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 40px 20px;
+      gap: 20px;
+    }
+
+    .sustentabilidade-imagem-destaque video {
+      width: 300px;
+      height: 200px;
+      object-fit: cover;
+      background-color: #000;
+    }
+    .locacao-container a{
+      color: #000;
+      text-decoration: underline;
+    }
+
+    .sustentabilidade-texto-destaque {
+      max-width: 300px;
+    }
+
+    .sustentabilidade-titulo-destaque,
+    .sustentabilidade-descricao-destaque,
+    .sustentabilidade-botao-destaque {
+      background-color: #ccc;
+      height: 20px;
+      margin-bottom: 10px;
+    }
+
+    .sustentabilidade-descricao-destaque {
+      height: 40px;
+    }
+
+    .sustentabilidade-botao-destaque {
+      width: 100px;
+      height: 30px;
+    }
+
+    /* INDICADORES */
+    .sustentabilidade-indicadores {
+      display: flex;
+      justify-content: center;
+      padding: 30px 0;
+      background-color: #e5e5e5;
+      gap: 20px;
+    }
+
+    .sustentabilidade-indicador {
+      width: 30px;
+      height: 30px;
+      background-color: #bbb;
+      border-radius: 50%;
+    }
+.sustentabilidade-card-descricao{
+  display: flex;
+  justify-content: center;
+
+}
+ .sustentabilidade-cards {
+    display: flex
+;
+    justify-content: center;
+    padding: 40px 20px;
+    gap: 20px;
+    height: 400px;
+}
+
+    .sustentabilidade-card {
+      width: 300px;
+      text-align: center;
+      background-color: #f0f0f0;
+      padding: 20px;
+    }
+    #card1, #card2, #card3{
+      transition: 0.2s;
+    }
+     #card1:hover{transition: 0.2s;
+      background-color: #F0542D;
+      color: #fff;
+    }
+    #card1:hover h2{
+      color: #ff9900;
+    }
+      #card2:hover h2{
+      color: #00505a;
+    }
+      #card3:hover h2{
+      color: #F0542D;
+    }
+    #card2:hover{
+      background-color:#ff9900 ;
+      color: #fff;
+      transition: 0.2s;
+    }
+       #card3:hover{transition: 0.2s;
+      background-color: #00505a;
+      color: #fff;
+    }
+
+    .sustentabilidade-card-titulo {
+     
+      height: 20px;
+      margin-bottom: 10px;
+    }
+
+    .sustentabilidade-card-descricao img {
+      width: 60px;
+      height: auto;
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    @media (max-width: 768px) {
+      .sustentabilidade-destaque,
+      .sustentabilidade-cards {
+        flex-direction: column;
+        align-items: center;
+      }
+    }

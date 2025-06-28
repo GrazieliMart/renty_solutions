@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Renty Locações & Soluções em Manaus</title>
+<!--CSS-->
+<link rel="stylesheet" href="css/navbar.css">
+<link rel="stylesheet" href="css/home.css">
+<link rel="stylesheet" href="css/footer.css">
+<link rel="stylesheet" href="css/locacoes.css">
+
+  <!-- SEO -->
+  <meta name="robots" content="index, follow">
+  <meta name="description" content="Empresa em Manaus especializada em terceirização, manutenção, gestão e elétrica. Descomplicamos as operações da sua empresa com locações de equipamentos sob medida.">
+  <meta name="keywords" content="Manaus, locações Manaus, aluguel de equipamentos em Manaus, manutenção em Manaus, elétrica em Manaus, terceirização Manaus, gestão operacional, Renty">
+  <meta name="author" content="Renty Locações">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Renty Locações & Soluções em Manaus">
+  <meta property="og:description" content="Soluções completas de manutenção, elétrica e locações em Manaus. Atendemos empresas com excelência e agilidade.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.rentysolutions.com.br">
+
+
+  <!-- Local Business (ajuda com SEO local) -->
+  <meta name="geo.region" content="BR-AM" />
+  <meta name="geo.placename" content="Manaus" />
+  <meta name="geo.position" content="-3.119027;-60.021731" />
+  <meta name="ICBM" content="-3.119027, -60.021731" />
+
+  <!-- Favicon e Styles -->
+  <link rel="icon" href="images/favicon.webp" type="image/x-icon">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter&family=Poppins:wght@500;700&display=swap" rel="stylesheet">
+<style>
+  .compra-vs-locacao {
+
+  margin: 0;
+  background: #f5f7fa;
+  color: #222;
+}
+.compra-vs-locacao header {
+  background: #00505a;
+  color: white;
+  padding: 30px 15px;
+  text-align: center;
+}
+.compra-vs-locacao header h1 {
+  margin: 0;
+  font-size: 2.8rem;
+  font-weight: 700;
+}
+.compra-vs-locacao header p {
+  font-size: 1.2rem;
+  margin-top: 8px;
+  font-weight: 500;
+}
+.compra-vs-locacao main {
+    /* max-width: 960px; */
+    margin: 30px auto;
+   
+}
+.compra-vs-locacao main section {
+  margin-bottom: 40px;
+}
+
+.compra-vs-locacao main section p {
+  line-height: 1.6;
+  margin-bottom: 15px;
+  font-size: 1.1rem;
+}
+.compra-vs-locacao main section ul {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 20px;
+}
+.compra-vs-locacao main section ul li {
+  padding-left: 26px;
+  margin-bottom: 10px;
+  position: relative;
+  font-size: 1.1rem;
+}
+.compra-vs-locacao main section ul li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: #2a8fbd;
+  font-weight: bold;
+}
+
+/* Cards para vantagens */
+.compra-vs-locacao .vantagens-list {
+  display: flex;
+  flex-wrap: wrap;
+ 
+  gap: 20px;
+}
+.compra-vs-locacao .vantagem {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgb(0 0 0 / 0.1);
+  flex: 1 1 280px;
+  padding: 20px;
+  transition: 0.2s;
+}
+.compra-vs-locacao .vantagem:hover{
+  background-color: #00505a;
+  transition: 0.2s;
+  color: #fff;
+  cursor: pointer;
+}
+.compra-vs-locacao .vantagem:hover h3{
+color: #ff6600;
+}
+.compra-vs-locacao .vantagem:hover p{
+color: #fff;
+}
+.compra-vs-locacao .vantagem h3 {
+  color: #00505a;
+  margin-bottom: 12px;
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+.compra-vs-locacao .vantagem p {
+  margin: 0;
+  font-size: 1rem;
+  color: #333;
+}
+
+/* Tabela comparativa */
+.compra-vs-locacao table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+.compra-vs-locacao table th,
+.compra-vs-locacao table td {
+  border: 1px solid #ddd;
+  padding: 12px 15px;
+  text-align: left;
+  font-size: 1rem;
+}
+.compra-vs-locacao table th {
+  background-color: #00505a;
+  color: white;
+  font-weight: 600;
+}
+.compra-vs-locacao table tr:nth-child(even) {
+  background-color: #f2f7ff;
+}
+
+/* Setores atendidos */
+.compra-vs-locacao .setores {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  margin-top: 15px;
+}
+.compra-vs-locacao .setor-card {
+  background: white;
+  box-shadow: 0 1px 6px rgb(0 0 0 / 0.1);
+  border-radius: 8px;
+  flex: 1 1 220px;
+  padding: 18px;
+}
+.compra-vs-locacao .setor-card h4 {
+  margin: 0 0 8px;
+  color: #00505a;
+}
+.compra-vs-locacao .setor-card p {
+  font-size: 1rem;
+  color: #444;
+}
+
+/* Botão ação */
+.compra-vs-locacao .btn-acao {
+  background-color: #00505a;
+  color: white;
+  font-weight: 600;
+  font-size: 1.1rem;
+  padding: 14px 30px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 30px;
+  transition: background-color 0.3s ease;
+}
+.compra-vs-locacao .btn-acao:hover {
+  background-color: #005bb5;
+}
+
+/* Parallax Video Banner */
+.compra-vs-locacao .locacao-parallax {
+  position: relative;
+  height: 280px;
+  overflow: hidden;
+}
+.compra-vs-locacao #parallax-img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  z-index: -1;
+}
+ .locacao-banner-texto {
+  position: relative;
+  z-index: 1;
+  height: 280px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 2rem;
+  font-weight: 700;
+  text-shadow: 0 0 10px rgba(0,0,0,0.6);
+  text-align: center;
+  padding: 0 15px;
+}
+.locacao-banner-texto h1{
+  font-size: 40px;
+}
+.locacao-banner-texto h2{
+  font-size: 20px;
+  margin-bottom: -10px;
+}
+@media (max-width: 720px) {
+  .compra-vs-locacao .vantagens-list {
+    flex-direction: column;
+  }
+  .compra-vs-locacao .setores {
+    flex-direction: column;
+  }
+}
+.section1{
+  margin-top: -50px;
+  background-color: #ff6600 ;
+  padding: 30px 400px;
+}
+.section1 h2{
+  color: #ffffff;
+}
+.section1 p{
+  color: #f2f7ff;
+}
+.section1 b{
+  font-weight: bold;
+  color: #00505a;
+}
+.section1 i{
+  background-color: #f5f7fa;
+  color: #00505a;
+  padding: 15px 20px;
+  border-radius: 50px;
+  font-size: 20px;
+}
+.section2{
+   padding: 30px 300px;
+}
+.section3{
+  padding: 30px 300px;
+}
+.categoria-texto p{
+  font-size: 12px;
+  font-weight: 200;
+  padding: 0px 20px 0px 0px;
+}
+.categorias-div-hero {
+    background-color: #00505a;
+    padding: 40px 20px;
+    margin-bottom: -40px;
+    text-align: left;
+}
+.titulo-categorias{
+  color: #fff;
+}
+.grid-section {
+    display: flex
+;
+    gap: 40px;
+    padding: 40px;
+    background: #ff6600;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+.grid-section .grid-text h2 {
+    font-size: 24px;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+.grid-section .grid-text p {
+   
+    color: #ffffff;
+    
+}
+.section4{
+  padding: 30px 300px;
+}
+.icon-vantagem i{         
+  background-color: #ff6600;
+  color: #ffffff;
+  border-radius: 50px;
+  padding: 10px 15px;
+    transition: 0.2s;
+}
+.compra-vs-locacao .vantagem i:hover{
+  background-color: #ffffff;
+  color: #ff6600;
+  transition: 0.2s;
+}
+  </style>
+</head>
+<body>
+ 
+  
+
+
+  <div id="nav-container"></div>
+ 
+  <div class="locacao-parallax">
+    <video src="images/locacao-compra.webp" autoplay loop muted id="parallax-img"></video>
+    <div class="locacao-banner-texto">
+      <div>
+        <div style="font-size: 1.2rem; margin-bottom: 6px;">
+          <h2><b style="color: #ff6600;">COMPRA</b> VS. <b style="color: #ffee00;">LOCAÇÃO</b></h2>
+        </div>
+        <div><h1>Uma decisão estratégica para <br>empresas inteligentes</h1></div>
+       
+      </div>
+    </div>
+  </div> <div class="compra-vs-locacao">
+
+  <main>
+    <section class="section1">
+      <br>
+     <i class="bi bi-bookmark-check-fill"></i>
+     <br><br>
+      <h2>Por que comprar, quando você pode evoluir com a locação?</h2>
+      <p>
+        Na Renty Solutions, ajudamos sua empresa a <b>focar</b> no que realmente importa: sua <b>atividade principal</b>.
+        A <b>locação de equipamentos</b> é mais do que uma escolha financeira — é uma estratégia de <b>performance</b>, <b>eficiência</b> e <b>sustentabilidade</b>.
+      </p>
+    </section>
+<section class="section2">
+  <h1>Vantagens da locação com a Renty Solutions</h1>
+  <div class="vantagens-list">
+    <div class="vantagem">
+      <div class="icon-vantagem">
+        <i class="bi bi-tools"></i>
+      </div>
+      <h3>Mais Eficiência Operacional</h3>
+      <p>
+        Sua equipe foca no <b>core business</b>, sem se preocupar com <b>manutenção</b> ou <b>imobilização de ativos</b>.<br />
+        Equipamentos sempre prontos para uso, com <b>assistência técnica</b> e <b>substituição rápida</b> em caso de falhas.
+      </p>
+    </div>
+    <div class="vantagem">
+      <div class="icon-vantagem">
+        <i class="bi bi-graph-up-arrow"></i>
+      </div>
+      <h3>Performance Contábil e Financeira</h3>
+      <p>
+        Redução da <b>taxa de amortização</b> no balanço, aumentando a <b>saúde contábil</b> e o <b>desempenho dos acionistas</b>.<br />
+        <b>Previsibilidade de custos</b>: mão de obra e peças de desgaste já inclusas no contrato.
+      </p>
+    </div>
+    <div class="vantagem">
+      <div class="icon-vantagem">
+        <i class="bi bi-cash-coin"></i>
+      </div>
+      <h3>Otimização Fiscal</h3>
+      <p>
+        Para empresas no <b>Lucro Real</b>, o contrato de locação gera créditos de <b>PIS</b> e <b>COFINS</b>.<br />
+        O <b>aluguel</b> é 100% dedutível do <b>IRPJ</b> e <b>CSLL</b>.<br />
+        <b>Menos ativos imobilizados</b> = mais <b>capital de giro disponível</b>, potencializando o <b>retorno financeiro</b>.
+      </p>
+    </div>
+  </div>
+
+  <br>
+
+  <div class="vantagens-list">
+    <div class="vantagem">
+      <div class="icon-vantagem">
+        <i class="bi bi-recycle"></i>
+      </div>
+      <h3>Economia Regenerativa</h3>
+      <p>
+        A <b>locação</b> reduz o <b>consumo de recursos</b> e prolonga o <b>ciclo de vida dos equipamentos</b>.<br />
+        <b>Menos descarte</b>, mais aproveitamento. Sua empresa participa de um modelo <b>regenerativo</b> e <b>consciente</b>.
+      </p>
+    </div>
+    <div class="vantagem">
+      <div class="icon-vantagem">
+        <i class="bi bi-cloud-drizzle"></i>
+      </div>
+      <h3>Menos Carbono</h3>
+      <p>
+        Optar pela locação reduz significativamente as <b>emissões de CO₂</b> associadas à <b>produção</b> e <b>descarte</b> de equipamentos.<br />
+        <b>Menos fabricação</b>, <b>menos transporte</b>, mais <b>impacto positivo</b> no planeta.
+      </p>
+    </div>
+    <div class="vantagem">
+      <div class="icon-vantagem">
+        <i class="bi bi-globe-americas"></i>
+      </div>
+      <h3>ESG na prática</h3>
+      <p>
+        A locação fortalece <b>ações reais</b> de <b>ESG</b>: reduz <b>resíduos</b>, promove <b>governança</b> e incentiva <b>práticas sustentáveis</b>.<br />
+        É uma decisão que comunica <b>responsabilidade ambiental</b> e <b>visão de futuro</b>.
+      </p>
+    </div>
+    <div class="vantagem">
+      <div class="icon-vantagem">
+        <i class="bi bi-person-badge"></i>
+      </div>
+      <h3>Pessoa Física e MEI</h3>
+      <p>
+        Ideal para quem precisa de <b>soluções acessíveis</b> e sem compromisso com <b>imobilização</b>.<br />
+        <b>Tecnologia de ponta</b> com <b>flexibilidade</b>, <b>economia</b> e <b>suporte técnico</b> — tudo sem burocracia.
+      </p>
+    </div>
+    <div class="vantagem">
+      <div class="icon-vantagem">
+        <i class="bi bi-receipt"></i>
+      </div>
+      <h3>Simples Nacional e Lucro Presumido</h3>
+      <p>
+        <b>Estrutura leve</b>, <b>fluxo de caixa saudável</b> e <b>controle de custos</b> facilitado.<br />
+        A locação evita <b>acúmulo de ativos</b> e permite <b>planejamento financeiro inteligente</b>.
+      </p>
+    </div>
+  </div>
+</section>
+
+<div class="grid-section">
+  <div class="grid-image">
+    <img src="images/renty-box-sustentabilidade.webp" alt="Soluções Renty">
+  </div>
+  <div class="grid-text">
+    <h2>Locar é sustentável</h2>
+    <p>
+      Na Renty Solutions, acreditamos em uma Economia Regenerativa. A locação prolonga o ciclo de vida dos equipamentos, evita descartes prematuros e reduz emissões associadas à produção em excesso.
+    </p>
+    <ul>
+        <li>Menos carbono</li>
+        <li>Reutilização de equipamentos</li>
+        <li>Redução de resíduos e desperdícios</li>
+        <li>Cadeia mais consciente e responsável</li>
+      </ul>
+  
+  </div>
+</div>
+     <section class="section4">
+  <h2>Resumo comparativo</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Compra</th>
+        <th>Locação (Renty Solutions)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><i class="bi bi-x-circle-fill" style="color:#c0392b;"></i> Alto investimento inicial</td>
+        <td><i class="bi bi-check-circle-fill" style="color:#27ae60;"></i> <b>Investimento reduzido</b></td>
+      </tr>
+      <tr>
+        <td><i class="bi bi-x-circle-fill" style="color:#c0392b;"></i> Manutenção por sua conta</td>
+        <td><i class="bi bi-check-circle-fill" style="color:#27ae60;"></i> <b>Manutenção inclusa no contrato</b></td>
+      </tr>
+      <tr>
+        <td><i class="bi bi-x-circle-fill" style="color:#c0392b;"></i> Equipamentos defasados com o tempo</td>
+        <td><i class="bi bi-check-circle-fill" style="color:#27ae60;"></i> <b>Equipamentos modernos sempre disponíveis</b></td>
+      </tr>
+      <tr>
+        <td><i class="bi bi-x-circle-fill" style="color:#c0392b;"></i> Impacta negativamente no balanço</td>
+        <td><i class="bi bi-check-circle-fill" style="color:#27ae60;"></i> <b>Diminui amortização e melhora indicadores</b></td>
+      </tr>
+      <tr>
+        <td><i class="bi bi-x-circle-fill" style="color:#c0392b;"></i> Dedução fiscal limitada</td>
+        <td><i class="bi bi-check-circle-fill" style="color:#27ae60;"></i> <b>100% dedutível (IRPJ e CSLL)</b></td>
+      </tr>
+      <tr>
+        <td><i class="bi bi-x-circle-fill" style="color:#c0392b;"></i> Sem créditos de PIS/COFINS</td>
+        <td><i class="bi bi-check-circle-fill" style="color:#27ae60;"></i> <b>Geração de créditos (Lucro Real)</b></td>
+      </tr>
+      <tr>
+        <td><i class="bi bi-x-circle-fill" style="color:#c0392b;"></i> Mais resíduos e carbono</td>
+        <td><i class="bi bi-check-circle-fill" style="color:#27ae60;"></i> <b>Economia circular e menos carbono</b></td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+
+    <div class="categorias-div-hero">
+  <h2 class="titulo-categorias">Ver todas as categorias</h2>
+
+  <div class="categorias-container">
+   <a href="produtos.html"> <div class="categoria-card">
+      <img src="images/category-card (2).webp" alt="Offshore" />
+      <div class="categoria-texto">
+       Construção Civil <span class="seta"><i class="bi bi-arrow-right"></i></span>
+      <p>Betoneiras, andaimes, máquinas de chapisco, torres de iluminação. <br> Evite a desvalorização de ativos caros e maximize sua obra com equipamentos sob demanda.</p>
+      </div>
+    </div></a>
+
+    <a href="produtos.html"> <div class="categoria-card">
+      <img src="images/category-card (3).webp" alt="Construction" />
+      <div class="categoria-texto">
+        Unidades de Energia <span class="seta"><i class="bi bi-arrow-right"></i></span>
+ <p>Geradores, torres de energia, cabines. Tenha energia onde e quando precisar — com manutenção garantida.</p>
+      </div>
+    </div></a>
+
+    <a href="produtos.html"> <div class="categoria-card">
+      <img src="images/category-card (1).webp" alt="Industry & Production" />
+      <div class="categoria-texto">
+        Food Service <span class="seta"><i class="bi bi-arrow-right"></i></span>
+          <p>Fornos industriais, mesas térmicas, refrigeradores e mais. Renove sua cozinha com agilidade e tecnologia, sem comprometer seu capital.</p>
+      </div>
+    </div></a>
+
+    <a href="produtos.html"> <div class="categoria-card">
+      <img src="images/category-card (4).webp" alt="Distribution Centres" />
+      <div class="categoria-texto">
+        TI <span class="seta"><i class="bi bi-arrow-right"></i></span>
+        <p>Tablets, impressoras, dispositivos móveis, notebooks. Suporte constante e atualização sem custo adicional.</p>
+      </div>
+    </div></a>
+  </div>
+  <br><br>
+  
+</div>
+
+   
+
+
+  
+  </main></div>
+
+ <div id="footer-container"></div>
+
+<script>
+  fetch('navbar.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('nav-container').innerHTML = data;
+
+      // === MENU MOBILE ===
+      const hamburger = document.getElementById('hamburger');
+      const mobileMenu = document.getElementById('mobileMenu');
+      if (hamburger && mobileMenu) {
+        hamburger.addEventListener('click', () => {
+          mobileMenu.style.display = mobileMenu.style.display === 'flex' ? 'none' : 'flex';
+        });
+      }
+
+      // === FUNÇÕES DE HOVER ===
+      function ativarModoCompra() {
+        const links = document.querySelectorAll('.dropdown-content a');
+        links.forEach(link => {
+          const href = link.getAttribute('href');
+          if (
+          
+            href === 'servicos.html' ||
+             href === 'locacoes.html' ||
+               href === 'revenda.html' ||
+            href === 'aluguel-equipamentos.html' ||
+            href === 'compra-equipamentos.html'
+          ) {
+            return; // pula esses links
+          }
+
+          const originalHref = link.getAttribute('data-original-href') || href;
+          link.setAttribute('data-original-href', originalHref);
+          if (!originalHref.startsWith('comprar-')) {
+            link.setAttribute('href', 'comprar-' + originalHref);
+          }
+
+          const originalText = link.getAttribute('data-original-text') || link.textContent;
+          link.setAttribute('data-original-text', originalText);
+          if (!originalText.startsWith('Comprar ')) {
+            link.textContent = 'Comprar ' + originalText;
+          }
+        });
+      }
+
+      function restaurarLinksOriginais() {
+        const links = document.querySelectorAll('.dropdown-content a');
+        links.forEach(link => {
+          const originalHref = link.getAttribute('data-original-href');
+          const originalText = link.getAttribute('data-original-text');
+
+          if (originalHref) link.setAttribute('href', originalHref);
+          if (originalText) link.textContent = originalText;
+        });
+      }
+
+      const comprarLink = document.querySelector('a[href="compra-equipamentos.html"]');
+      const aluguelLink = document.querySelector('a[href="aluguel-equipamentos.html"]');
+      const dropdown = document.querySelector('.dropdown-content');
+
+      // Ativa o modo comprar ao entrar no link
+      if (comprarLink) {
+        comprarLink.addEventListener('mouseenter', ativarModoCompra);
+      }
+
+      // Restaura os links somente quando sai do menu inteiro
+      if (dropdown) {
+        dropdown.addEventListener('mouseleave', restaurarLinksOriginais);
+      }
+
+      // Aluguel de equipamentos desativa modo comprar (caso o usuário passe de novo por cima)
+      if (aluguelLink) {
+        aluguelLink.addEventListener('mouseenter', restaurarLinksOriginais);
+      }
+    });
+</script>
+ 
+
+<script>
+  const searchBtn = document.getElementById('searchBtn');
+  const searchDropdown = document.getElementById('searchDropdown');
+  const searchInput = document.getElementById('searchInput');
+
+  // Mostrar/ocultar dropdown ao clicar no botão
+  searchBtn.addEventListener('click', () => {
+    if (searchDropdown.style.display === 'block') {
+      searchDropdown.style.display = 'none';
+    } else {
+      searchDropdown.style.display = 'block';
+      filterProducts(); // Atualiza o filtro ao abrir
+    }
+  });
+
+  // Mostrar dropdown ao focar no input
+  searchInput.addEventListener('focus', () => {
+    searchDropdown.style.display = 'block';
+    filterProducts(); // já mostra filtrado
+  });
+
+  // Filtrar categorias e produtos conforme o texto digitado
+  function filterProducts() {
+    const filter = searchInput.value.toLowerCase();
+    const categories = searchDropdown.querySelectorAll('.category');
+
+    categories.forEach(cat => {
+      const catName = cat.getAttribute('data-category');
+      const products = cat.querySelectorAll('ul li');
+
+      let showCategory = false;
+
+      products.forEach(prod => {
+        const text = prod.textContent.toLowerCase();
+        if (filter === '' || text.includes(filter) || catName.includes(filter)) {
+          prod.style.display = '';
+          showCategory = true;
+        } else {
+          prod.style.display = 'none';
+        }
+      });
+
+      cat.style.display = showCategory ? '' : 'none';
+    });
+  }
+
+  // Atualiza em tempo real enquanto digita
+  searchInput.addEventListener('input', () => {
+    filterProducts();
+  });
+
+  // Esconder dropdown se clicar fora
+  document.addEventListener('click', (e) => {
+    if (!e.target.closest('.hero-content')) {
+      searchDropdown.style.display = 'none';
+    }
+  });
+</script>
+<script>
+  const whatsappButton = document.getElementById('whatsappButton');
+
+  function vibrateButton() {
+    whatsappButton.classList.add('vibrate');
+    setTimeout(() => {
+      whatsappButton.classList.remove('vibrate');
+    }, 1000); // Remove a animação depois de 1 segundo
+  }
+
+  // Vibra a cada 10 segundos
+  setInterval(vibrateButton, 10000);
+</script>
+<script>
+  let currentIndex = 0;
+  const track = document.getElementById("carouselTrack");
+  const totalCards = track.children.length;
+
+  function moveSlide(direction) {
+    const visibleCards = window.innerWidth <= 480 ? 1 : window.innerWidth <= 768 ? 2 : 4;
+    currentIndex += direction;
+    if (currentIndex < 0) currentIndex = totalCards - visibleCards;
+    if (currentIndex > totalCards - visibleCards) currentIndex = 0;
+    const cardWidth = track.children[0].offsetWidth;
+    track.style.transform = `translateX(-${cardWidth * currentIndex}px)`;
+  }
+</script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const frases = [
+      "Escolha a Renty e transforme a gestão de ativos em uma vantagem competitiva.",
+      "Tercerização, manutenção, gestão e elétrica.",
+      "Locação full-service e soluções customizadas para otimizar empresas de todosos tamanhos e segmentos.",
+      "Soluções sustentáveis para empresas modernas.",
+      "Velocidade para a sua operação, acelere seus projetos com a Renty."
+    ];
+
+    function iniciarTroca() {
+      const div = document.getElementById("noticias");
+      if (!div) return; // não faz nada se a div ainda não existir
+
+      let index = 0;
+
+      setInterval(() => {
+        div.style.opacity = 0;
+
+        setTimeout(() => {
+          index = (index + 1) % frases.length;
+          div.textContent = frases[index];
+          div.style.opacity = 1;
+        }, 500);
+      }, 5000);
+    }
+
+    // Espera até a div existir no DOM
+    const observador = setInterval(() => {
+      if (document.getElementById("noticias")) {
+        clearInterval(observador);
+        iniciarTroca();
+      }
+    }, 100);
+  });
+</script>
+
+<script>
+  const modal = document.getElementById('productModal');
+  const selectionText = document.getElementById('selectionText');
+
+  function openModal() {
+    modal.classList.add('show');
+    modal.classList.remove('hide');
+    // Salva a data atual como último dia de exibição
+    localStorage.setItem('modal_last_shown', new Date().toDateString());
+  }
+
+  function closeModal() {
+    modal.classList.add('hide');
+    setTimeout(() => {
+      modal.classList.remove('show');
+    }, 300);
+  }
+
+  function selectOption(option) {
+    localStorage.setItem('product_view', option);
+    updateText(option);
+    closeModal();
+  }
+
+  function updateText(option) {
+    if (!selectionText) return;
+    if (option === 'business') {
+      selectionText.innerHTML = '<strong>Empresarial</strong> | Pessoal';
+    } else if (option === 'individual') {
+      selectionText.innerHTML = 'Empresarial | <strong>Pessoal</strong>';
+    } else {
+      selectionText.innerHTML = 'Empresarial | Pessoal';
+    }
+  }
+
+  window.onload = function () {
+    // Verifica se o modal já foi mostrado hoje
+    const lastShown = localStorage.getItem('modal_last_shown');
+    const today = new Date().toDateString();
+
+    if (lastShown !== today) {
+      openModal(); // Só abre se for um novo dia
+    }
+
+    // Atualiza o texto conforme opção salva, se houver
+    const savedOption = localStorage.getItem('product_view');
+    if (savedOption) {
+      updateText(savedOption);
+    }
+
+    // Permite reabrir o modal clicando no texto
+    if (selectionText) {
+      selectionText.style.cursor = 'pointer';
+      selectionText.onclick = () => {
+        openModal();
+      };
+    }
+  };
+</script>
+  <script>
+    fetch('footer.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('footer-container').innerHTML = data;
+      });
+  </script>
+ 
+
+<a href="https://web.whatsapp.com/send?phone=5592985771111&text=" target="_blank" class="whatsapp-button" id="whatsappButton">
+  <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" />
+</a>
+<button id="btn-topo" aria-label="Voltar para o topo"><i class="bi bi-arrow-up-short"></i></button>
+
+<script>
+  const btnTopo = document.getElementById('btn-topo');
+
+  window.addEventListener('scroll', () => {
+    const scrollPosition = window.scrollY || document.documentElement.scrollTop;
+    const halfPage = document.documentElement.scrollHeight / 2;
+
+    if (scrollPosition > halfPage) {
+      btnTopo.classList.add('show');
+    } else {
+      btnTopo.classList.remove('show');
+    }
+  });
+
+  btnTopo.addEventListener('click', () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  });
+</script>
+<script>
+  window.addEventListener('scroll', function () {
+    const parallaxImg = document.getElementById('parallax-img');
+    const scrollPosition = window.scrollY;
+    // Ajusta a velocidade do efeito parallax — quanto menor o divisor, mais intenso
+    parallaxImg.style.transform = `translateY(${scrollPosition * 0.4}px)`;
+  });
+</script>
+  </body>

@@ -262,13 +262,13 @@ justify-content: center;
     box-sizing: border-box;
 }
 .produto button {
-  background-color: #ff6600;
+  background-color: #e60000;
   color: white;
   padding: 12px 24px;
   border: none;
   text-decoration: none;
   cursor: pointer;
-  border-radius: 6px;
+  border-radius: 0px;
   font-weight: bold;
   display: inline-block;
 }
@@ -277,13 +277,17 @@ justify-content: center;
   color: white;
   padding: 12px 24px;
   border: none;
+  cursor: pointer;
   text-decoration: none;
   border-radius: 6px;
   font-weight: bold;
   display: inline-block;
+}.modal-content button:hover {
+  background-color: #b44200;
+  
 }
 .produto button:hover {
-  background-color: #e65c00;
+  background-color: #cc0000;
 }
 
 .modal-content {

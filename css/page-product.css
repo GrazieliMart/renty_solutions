@@ -77,6 +77,21 @@ html {
   background-color: #cc0000;
 }
 
+.product-page-button-alugar {
+  margin-top: 10px;
+  background-color: #49e600;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.product-page-button-alugar:hover {
+  background-color: #3acc00;
+}
+
 .product-page-tabs {
   display: flex;
   gap: 10px;
@@ -104,7 +119,65 @@ html {
 
 .product-page-content p {
   line-height: 1.6;
-}@media screen and (max-width: 1024px) {
+}
+
+
+.product-page-beneficios{
+  padding: 15px;
+  border: 2px solid #9cf0b1;
+  border-radius: 5px;
+  background-color: rgba(35, 226, 35, 0.116);
+}
+.product-page h2{
+  font-size: 1.0rem;
+  color:  rgb(0, 209, 0);
+}
+.product-page-beneficios i{
+  color: #fff;
+  background-color: rgb(0, 209, 0);
+  padding: 8px 10px;
+  font-size: 0.8rem;
+  margin-right: 5px;
+  border-radius: 50px;
+}
+.product-page-beneficios p{
+  font-size: 0.8rem;
+}
+
+
+
+
+
+
+
+.product-page-beneficios-compra{
+  padding: 15px;
+  border: 2px solid #f09c9c;
+  border-radius: 5px;
+  background-color: rgba(226, 35, 35, 0.116);
+}
+.product-page-beneficios-compra h2{
+  font-size: 1.0rem;
+  color:  rgb(209, 0, 0);
+}
+.product-page-beneficios-compra i{
+  color: #fff;
+  background-color: rgb(209, 0, 0);
+  padding: 8px 10px;
+  font-size: 0.8rem;
+  margin-right: 5px;
+  border-radius: 50px;
+}
+.product-page-beneficios-compra span a {
+  color: green;
+  font-weight: bold;
+  text-decoration: underline;
+}
+.product-page-beneficios-compra p{
+  font-size: 0.8rem;
+}
+
+@media screen and (max-width: 1024px) {
   .localizacao {
     padding-left: 40px;
     font-size: 14px;

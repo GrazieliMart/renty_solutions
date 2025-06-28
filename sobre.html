@@ -135,21 +135,21 @@ Aliar o desenvolvimento financeiro com preocupações sustentáveis de longo pra
 
   <div class="categorias-container">
    <a href="produtos.html"> <div class="categoria-card">
-      <img src="images/category-card (1).webp" alt="Offshore" />
+      <img src="images/category-card (2).webp" alt="Offshore" />
       <div class="categoria-texto">
        Construção Civil <span class="seta"><i class="bi bi-arrow-right"></i></span>
       </div>
     </div></a>
 
     <a href="produtos.html"> <div class="categoria-card">
-      <img src="images/category-card (2).webp" alt="Construction" />
+      <img src="images/category-card (3).webp" alt="Construction" />
       <div class="categoria-texto">
         Unidades de Energia <span class="seta"><i class="bi bi-arrow-right"></i></span>
       </div>
     </div></a>
 
     <a href="produtos.html"> <div class="categoria-card">
-      <img src="images/category-card (3).webp" alt="Industry & Production" />
+      <img src="images/category-card (1).webp" alt="Industry & Production" />
       <div class="categoria-texto">
         Food Service <span class="seta"><i class="bi bi-arrow-right"></i></span>
       </div>
@@ -169,27 +169,82 @@ Aliar o desenvolvimento financeiro com preocupações sustentáveis de longo pra
 
  <div id="footer-container"></div>
 
-
-
 <script>
-  // Carrega a navbar
   fetch('navbar.html')
     .then(response => response.text())
     .then(data => {
       document.getElementById('nav-container').innerHTML = data;
 
-      // Agora que a navbar foi carregada, adicione os eventos
+      // === MENU MOBILE ===
       const hamburger = document.getElementById('hamburger');
       const mobileMenu = document.getElementById('mobileMenu');
-
       if (hamburger && mobileMenu) {
         hamburger.addEventListener('click', () => {
           mobileMenu.style.display = mobileMenu.style.display === 'flex' ? 'none' : 'flex';
         });
       }
+
+      // === FUNÇÕES DE HOVER ===
+      function ativarModoCompra() {
+        const links = document.querySelectorAll('.dropdown-content a');
+        links.forEach(link => {
+          const href = link.getAttribute('href');
+          if (
+          
+            href === 'servicos.html' ||
+             href === 'locacoes.html' ||
+               href === 'revenda.html' ||
+            href === 'aluguel-equipamentos.html' ||
+            href === 'compra-equipamentos.html'
+          ) {
+            return; // pula esses links
+          }
+
+          const originalHref = link.getAttribute('data-original-href') || href;
+          link.setAttribute('data-original-href', originalHref);
+          if (!originalHref.startsWith('comprar-')) {
+            link.setAttribute('href', 'comprar-' + originalHref);
+          }
+
+          const originalText = link.getAttribute('data-original-text') || link.textContent;
+          link.setAttribute('data-original-text', originalText);
+          if (!originalText.startsWith('Comprar ')) {
+            link.textContent = 'Comprar ' + originalText;
+          }
+        });
+      }
+
+      function restaurarLinksOriginais() {
+        const links = document.querySelectorAll('.dropdown-content a');
+        links.forEach(link => {
+          const originalHref = link.getAttribute('data-original-href');
+          const originalText = link.getAttribute('data-original-text');
+
+          if (originalHref) link.setAttribute('href', originalHref);
+          if (originalText) link.textContent = originalText;
+        });
+      }
+
+      const comprarLink = document.querySelector('a[href="compra-equipamentos.html"]');
+      const aluguelLink = document.querySelector('a[href="aluguel-equipamentos.html"]');
+      const dropdown = document.querySelector('.dropdown-content');
+
+      // Ativa o modo comprar ao entrar no link
+      if (comprarLink) {
+        comprarLink.addEventListener('mouseenter', ativarModoCompra);
+      }
+
+      // Restaura os links somente quando sai do menu inteiro
+      if (dropdown) {
+        dropdown.addEventListener('mouseleave', restaurarLinksOriginais);
+      }
+
+      // Aluguel de equipamentos desativa modo comprar (caso o usuário passe de novo por cima)
+      if (aluguelLink) {
+        aluguelLink.addEventListener('mouseenter', restaurarLinksOriginais);
+      }
     });
 </script>
-
  
 
 <script>
@@ -406,6 +461,14 @@ Aliar o desenvolvimento financeiro com preocupações sustentáveis de longo pra
       top: 0,
       behavior: 'smooth'
     });
+  });
+</script>
+<script>
+  window.addEventListener('scroll', function () {
+    const parallaxImg = document.getElementById('parallax-img');
+    const scrollPosition = window.scrollY;
+    // Ajusta a velocidade do efeito parallax — quanto menor o divisor, mais intenso
+    parallaxImg.style.transform = `translateY(${scrollPosition * 0.4}px)`;
   });
 </script>
 </body>

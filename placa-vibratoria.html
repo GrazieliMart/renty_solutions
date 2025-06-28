@@ -51,6 +51,12 @@
     <img src="images/card (1).webp" class="product-page-image" alt="Placa Vibratória">
     <div class="product-page-info">
       <h1 class="product-page-title">Placa Vibratória</h1>
+      <div class="product-page-beneficios">
+  <h2><i class="bi bi-leaf"></i> Benefícios da Locação</h2>
+  <p>Compactação eficiente e rápida, reduzindo custos e sem necessidade de compra.</p>
+  <span>Até <b>62% menos</b> emissão de carbono ao evitar produção e transporte de novas placas vibratórias.</span>
+</div>
+
       <p class="product-page-description">
         Nossa Placa Vibratória é ideal para compactação eficiente de solos, asfaltos e pavimentos em obras de construção civil. Compacta, resistente e fácil de manusear, ela proporciona melhor densidade e estabilidade para suas obras, garantindo qualidade e segurança em cada etapa.
       </p>
@@ -313,69 +319,6 @@
 </div>
 
 
-<div class="hero-second">
-  <div class="hero-second-div1">
-    <div>
-  <h2>Unidades de Energia</h2>
- 
-</div>
-
-</div>
-
-
-<div class="carousel-container" id="carrossel-2">
-  <div class="carousel-track" id="carouselTrack">
-
-    <div class="card">
-      <div class="card-content">
-        <a href="gerador-de-energia.html">
-          <img src="images/card (5).webp" alt="Aluguel de Gerador de Energia Manaus">
-          <h3>Gerador de Energia</h3>
-          <p>Equipamento ideal para fornecer energia elétrica em obras e eventos.</p>
-        </a>
-      </div>
-    </div>
-
-    <div class="card">
-      <div class="card-content">
-        <a href="quadro-de-transferencia.html">
-          <img src="images/card (10).webp" alt="Aluguel de Quadro de Transferência">
-          <h3>Quadro de Transferência</h3>
-          <p>Controla a distribuição de energia entre gerador e rede elétrica com segurança.</p>
-        </a>
-      </div>
-    </div>
-
-    <div class="card">
-      <div class="card-content">
-        <a href="nobreak.html">
-          <img src="images/card (11).webp" alt="Aluguel de NoBreak">
-          <h3>NoBreak</h3>
-          <p>Equipamento que garante o fornecimento contínuo de energia elétrica.</p>
-        </a>
-      </div>
-    </div>
-
-    <div class="card">
-      <div class="card-content">
-        <a href="torre-de-energia.html">
-          <img src="images/card (12).webp" alt="Aluguel de Torre de Energia Manaus">
-          <h3>Torre de Energia</h3>
-          <p>Locação de torre para fornecimento de energia temporário.</p>
-        </a>
-      </div>
-    </div>
-
-   
-
-
-  </div>
- <div class="controls control-left" onclick="moveSlide(-1)"><i class="bi bi-arrow-left-short"></i></div>
-  <div class="controls control-right" onclick="moveSlide(1)"><i class="bi bi-arrow-right-short"></i></div>
-</div>
-</div>
-
-
 
 
 
@@ -394,23 +337,82 @@
 
 
 <script>
-  // Carrega a navbar
   fetch('navbar.html')
     .then(response => response.text())
     .then(data => {
       document.getElementById('nav-container').innerHTML = data;
 
-      // Agora que a navbar foi carregada, adicione os eventos
+      // === MENU MOBILE ===
       const hamburger = document.getElementById('hamburger');
       const mobileMenu = document.getElementById('mobileMenu');
-
       if (hamburger && mobileMenu) {
         hamburger.addEventListener('click', () => {
           mobileMenu.style.display = mobileMenu.style.display === 'flex' ? 'none' : 'flex';
         });
       }
+
+      // === FUNÇÕES DE HOVER ===
+      function ativarModoCompra() {
+        const links = document.querySelectorAll('.dropdown-content a');
+        links.forEach(link => {
+          const href = link.getAttribute('href');
+          if (
+          
+            href === 'servicos.html' ||
+             href === 'locacoes.html' ||
+               href === 'revenda.html' ||
+            href === 'aluguel-equipamentos.html' ||
+            href === 'compra-equipamentos.html'
+          ) {
+            return; // pula esses links
+          }
+
+          const originalHref = link.getAttribute('data-original-href') || href;
+          link.setAttribute('data-original-href', originalHref);
+          if (!originalHref.startsWith('comprar-')) {
+            link.setAttribute('href', 'comprar-' + originalHref);
+          }
+
+          const originalText = link.getAttribute('data-original-text') || link.textContent;
+          link.setAttribute('data-original-text', originalText);
+          if (!originalText.startsWith('Comprar ')) {
+            link.textContent = 'Comprar ' + originalText;
+          }
+        });
+      }
+
+      function restaurarLinksOriginais() {
+        const links = document.querySelectorAll('.dropdown-content a');
+        links.forEach(link => {
+          const originalHref = link.getAttribute('data-original-href');
+          const originalText = link.getAttribute('data-original-text');
+
+          if (originalHref) link.setAttribute('href', originalHref);
+          if (originalText) link.textContent = originalText;
+        });
+      }
+
+      const comprarLink = document.querySelector('a[href="compra-equipamentos.html"]');
+      const aluguelLink = document.querySelector('a[href="aluguel-equipamentos.html"]');
+      const dropdown = document.querySelector('.dropdown-content');
+
+      // Ativa o modo comprar ao entrar no link
+      if (comprarLink) {
+        comprarLink.addEventListener('mouseenter', ativarModoCompra);
+      }
+
+      // Restaura os links somente quando sai do menu inteiro
+      if (dropdown) {
+        dropdown.addEventListener('mouseleave', restaurarLinksOriginais);
+      }
+
+      // Aluguel de equipamentos desativa modo comprar (caso o usuário passe de novo por cima)
+      if (aluguelLink) {
+        aluguelLink.addEventListener('mouseenter', restaurarLinksOriginais);
+      }
     });
 </script>
+
 
  
 

@@ -77,8 +77,9 @@
         <li><button onclick="filtrarProdutos('todos')">Todos</button></li>
         <li><button onclick="filtrarProdutos('construcao')">Construção Civil</button></li>
         <li><button onclick="filtrarProdutos('energia')">Unidades de Energia</button></li>
-        <li><button onclick="filtrarProdutos('ti')">Tecnologia da Informação (TI)</button></li>
-        <li><button onclick="filtrarProdutos('food')">Food Service</button></li>
+     
+        <li><button onclick="filtrarProdutos('food')">Food Service</button></li>  
+         <li><button onclick="filtrarProdutos('ti')">Tecnologia da Informação (TI)</button></li>
       </ul>
     </aside>
 
@@ -433,7 +434,7 @@
         <div>
         <h4>Locação de Máquina de Corte de Carne para Restaurantes em Manaus</h4>
         <p>Equipamento para corte preciso de carnes, garantindo qualidade e rendimento.</p>
-       <div class="link-produto"><a href="maquina-de-corte.html">Ver Mais <i class="bi bi-arrow-bar-right"></i></a></div></div>
+       <div class="link-produto"><a href="corte-de-carne.html">Ver Mais <i class="bi bi-arrow-bar-right"></i></a></div></div>
        <div class="button-produto">  
           <p>Locação a partir de</p>
           <h3>Preços e Condições *</h3>
@@ -724,24 +725,81 @@ export default function ProductFilter() {
 
 
 <script>
-  // Carrega a navbar
   fetch('navbar.html')
     .then(response => response.text())
     .then(data => {
       document.getElementById('nav-container').innerHTML = data;
 
-      // Agora que a navbar foi carregada, adicione os eventos
+      // === MENU MOBILE ===
       const hamburger = document.getElementById('hamburger');
       const mobileMenu = document.getElementById('mobileMenu');
-
       if (hamburger && mobileMenu) {
         hamburger.addEventListener('click', () => {
           mobileMenu.style.display = mobileMenu.style.display === 'flex' ? 'none' : 'flex';
         });
       }
+
+      // === FUNÇÕES DE HOVER ===
+      function ativarModoCompra() {
+        const links = document.querySelectorAll('.dropdown-content a');
+        links.forEach(link => {
+          const href = link.getAttribute('href');
+          if (
+          
+            href === 'servicos.html' ||
+             href === 'locacoes.html' ||
+               href === 'revenda.html' ||
+            href === 'aluguel-equipamentos.html' ||
+            href === 'compra-equipamentos.html'
+          ) {
+            return; // pula esses links
+          }
+
+          const originalHref = link.getAttribute('data-original-href') || href;
+          link.setAttribute('data-original-href', originalHref);
+          if (!originalHref.startsWith('comprar-')) {
+            link.setAttribute('href', 'comprar-' + originalHref);
+          }
+
+          const originalText = link.getAttribute('data-original-text') || link.textContent;
+          link.setAttribute('data-original-text', originalText);
+          if (!originalText.startsWith('Comprar ')) {
+            link.textContent = 'Comprar ' + originalText;
+          }
+        });
+      }
+
+      function restaurarLinksOriginais() {
+        const links = document.querySelectorAll('.dropdown-content a');
+        links.forEach(link => {
+          const originalHref = link.getAttribute('data-original-href');
+          const originalText = link.getAttribute('data-original-text');
+
+          if (originalHref) link.setAttribute('href', originalHref);
+          if (originalText) link.textContent = originalText;
+        });
+      }
+
+      const comprarLink = document.querySelector('a[href="compra-equipamentos.html"]');
+      const aluguelLink = document.querySelector('a[href="aluguel-equipamentos.html"]');
+      const dropdown = document.querySelector('.dropdown-content');
+
+      // Ativa o modo comprar ao entrar no link
+      if (comprarLink) {
+        comprarLink.addEventListener('mouseenter', ativarModoCompra);
+      }
+
+      // Restaura os links somente quando sai do menu inteiro
+      if (dropdown) {
+        dropdown.addEventListener('mouseleave', restaurarLinksOriginais);
+      }
+
+      // Aluguel de equipamentos desativa modo comprar (caso o usuário passe de novo por cima)
+      if (aluguelLink) {
+        aluguelLink.addEventListener('mouseenter', restaurarLinksOriginais);
+      }
     });
 </script>
-
  
 
 
@@ -836,6 +894,14 @@ export default function ProductFilter() {
       top: 0,
       behavior: 'smooth'
     });
+  });
+</script>
+<script>
+  window.addEventListener('scroll', function () {
+    const parallaxImg = document.getElementById('parallax-img');
+    const scrollPosition = window.scrollY;
+    // Ajusta a velocidade do efeito parallax — quanto menor o divisor, mais intenso
+    parallaxImg.style.transform = `translateY(${scrollPosition * 0.4}px)`;
   });
 </script>
 

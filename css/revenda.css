@@ -1,0 +1,22 @@
+.revenda-align p{
+margin-bottom: -5px;
+}
+.revenda-align button{
+    color: #fff;
+    background-color: #e60000;
+    padding: 15px;
+    border: none;
+    cursor: pointer;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+.revenda-align button:hover{
+    background-color: #cc0000;
+
+}
+.revenda-align-button{
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    margin-top: 10px;
+}

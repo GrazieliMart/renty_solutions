@@ -96,9 +96,26 @@ nav{
     font-weight: bold;
     border: none;
     border-radius: 20px;transition: 0.2s;
-   font-size: 0.9rem;
+   font-size: 0.8rem;
    display: flex;
    gap: 10px;
+   }
+   #filial-btn2{
+    padding: 10px 20px;
+    color: white;
+    background-color: #F0542D;
+    font-weight: bold;
+    border: none;
+    border-radius: 20px;transition: 0.2s;
+   font-size: 0.7rem;
+   display: flex;
+   gap: 10px;
+   }
+   #filial-btn2:hover{
+    background-color: #af3213;
+    color: white;
+    transition: 0.2s;
+    cursor: pointer;
    }
    .filial button:hover {
     background-color: #F0542D;
@@ -214,25 +231,58 @@ nav{
 ;
     align-items: center;
 
-    gap: 330px;
+    gap: 50px;
     border-bottom: 1px solid #ccc;
 }
     .bottom-nav > div {
       position: relative;
     }
- .dropdown-btn {
-      background: black;
-      color: white;
-      border: none;
-      font-weight: 800;
-      padding: 10px 12px;
-      cursor: pointer;
-      border-radius: 4px;
-      display: flex;
-      align-items: center;
-      gap: 6px;
-    }
-
+.dropdown-btn {
+    background: black;
+    color: white;
+    border: none;
+    font-weight: 800;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 4px;
+    display: flex
+;
+    align-items: center;
+    gap: 6px;
+}
+#btn-aluguel{
+  padding: 10px 10px;
+  width: fit-content;
+  font-size: 12px;
+  border-radius: 10px;
+  background-color: #ff6600 ;
+  color: white;
+}
+#btn-aluguel:hover{
+  background-color: #af3213;
+}
+#btn-comprar{
+  padding: 10px 10px;
+  width: fit-content;
+  font-size: 12px;
+  border-radius: 10px;
+  background-color: #F0542D ;
+  color: white;
+}
+#btn-sustentabilidade:hover{
+  background-color: #042429;
+}
+#btn-sustentabilidade{
+  padding: 10px 10px;
+  width: fit-content;
+  font-size: 12px;
+  border-radius: 10px;
+  background-color: #00505a ;
+  color: white;
+}
+#btn-comprar:hover{
+  background-color: #af3213;
+}
     .dropdown-btn i {
       transition: transform 0.3s ease;
     }
@@ -332,7 +382,7 @@ nav{
 
     .menu-section {
       border-right: 1px solid #ddd;
-      padding-right: 20px;
+      padding-right: 0px;
     }
 
     .menu-section:last-child {
@@ -396,6 +446,22 @@ nav{
 .mobile-menu .cta-btn:hover {
   background-color: #af3213;
 }
+/* Estilo padrão */
+#comprar {
+  color: #000;
+  background-color: transparent;
+  transition: background 0.3s, color 0.3s;
+}
+
+/* Quando o mouse estiver sobre o botão OU sobre o menu */
+#comprar-dropdown:hover #comprar {
+  background-color: #a3a3a3;
+  color: #ff6600;
+  padding: 4px 0px;
+  display: flex;
+  width: 100%;
+}
+
 
 /* RESPONSIVO */
 @media screen and (max-width: 1024px) {

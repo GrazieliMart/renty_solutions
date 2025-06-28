@@ -27,30 +27,38 @@
           <button class="hamburger" id="hamburger">&#9776;</button>
         </div>
         <div class="mobile-menu" id="mobileMenu">
-          <a href="index.html">Início</a>
-          <a href="locacoes.html">Locações</a>
-          <a href="produtos.html">Produtos</a>
+         
+          <a href="locacoes.html">Aluguel de equipamentos</a>
+          <a href="produtos.html">Contratar equipamentos</a>
 
           <a href="sobre.html">Sobre</a>
-          <a href="atendimento.html" class="cta-btn">Cotação Personalizada</a>
+          <a href="cotacao-personalizada.html " class="cta-btn">Cotação Personalizada</a>
         </div>
       </div>
 
       <!-- Bottom nav -->
       <div class="bottom-nav">
-        <div>
+        <div> 
+          
           <div class="dropdown-container">
-            <button class="dropdown-btn">Produtos <i class="bi bi-chevron-down"></i></button>
+            <a href="index.html"><button class="dropdown-btn">Home</button></a>
+          </div>
+ <div class="dropdown-container">
+            <a href="sobre.html"><button class="dropdown-btn">Sobre</button></a>
+          </div>
+          <div class="dropdown-container">
+           <a href="produtos.html"><button class="dropdown-btn">Produtos <i class="bi bi-chevron-down"></i></button></a> 
+            
             <div class="dropdown-content">
               <div class="menu-section">
-                <h4 id="h4-titulo">O que você gostaria de contratar?</h4>
+                <h4 id="h4-titulo">O que você tem interesse em contratar?</h4>
                 <ul>
-                  <li><a href="produtos.html">Construção Civil</a></li>
-                  <li><a href="produtos.html">Serviços Industriais</a></li>
-                  <li><a href="produtos.html">Unidades de Energia</a></li>
-                  <li><a href="produtos.html">Industria</a></li>
-                  <li><a href="produtos.html">T.I</a></li>
-                  <li><a href="produtos.html">Food Service</a></li>
+                  <li><a href="aluguel-equipamentos.html">Aluguel de Equipamentos</a></li>
+                  <li><a href="compra-equipamentos.html" id="comprar">Comprar Equipamentos</a></li>
+                
+            <li><a href="servicos.html">Serviços</a></li>
+             <li><a href="revenda.html">Revenda</a></li>
+                 <li><a href="locacoes.html">Locações</a></li>
                 </ul>
               </div>
               <div>
@@ -66,17 +74,7 @@
         <li><a href="rompedor-de-concreto.html">Rompedor de Concreto</a></li>
         <li><a href="alisadora-de-concreto.html">Alisadora de Concreto</a></li>
       </ul>
-              </div>
-              <div>
-                <h4>Food Service</h4>
-                <ul>
-        <li><a href="forno-industrial.html">Forno Industrial</a></li>
-        <li><a href="mesa-seca.html">Mesa seca Inox</a></li>
-        <li><a href="refrigeracao.html">Refrigeração</a></li>
-        <li><a href="corte-de-carne.html">Máquina de corte de carnes</a></li>
-      </ul>
-              </div>
-               <div>
+              </div> <div>
                 <h4>Unidades de Energia</h4>
                 <ul>
         <li><a href="gerador-de-energia.html">Gerador de energia</a></li>
@@ -86,6 +84,16 @@
       </ul>
               </div>
 
+              <div>
+                <h4>Food Service</h4>
+                <ul>
+        <li><a href="forno-industrial.html">Forno Industrial</a></li>
+        <li><a href="mesa-seca.html">Mesa seca Inox</a></li>
+        <li><a href="refrigeracao.html">Refrigeração</a></li>
+        <li><a href="corte-de-carne.html">Máquina de corte de carnes</a></li>
+      </ul>
+              </div>
+              
               <div>
                 <h4>T.I.</h4>
                  <ul>
@@ -100,25 +108,88 @@
               </div>
             </div>
           </div>
+           
         </div>
 
         <div class="a-links-nav">
-          <a href="index.html" class="menu__link">Ínicio</a>
-          <a href="locacoes.html" class="menu__link">Locações</a>
-          <a href="produtos.html" class="menu__link">Produtos</a>
-          <a href="sobre.html" class="menu__link">Sobre</a>
+           <a href="aluguel-equipamentos.html" id="btn-aluguel">Aluguel de equipamentos</a>
+          <a href="compra-equipamentos.html" id="btn-comprar">Comprar equipamentos</a>
+          <a href="sustentabilidade.html"  id="btn-sustentabilidade">Sustentabilidade</a>
 
         </div>
 
         <div class="filial">
-          <a href="atendimento.html">
+          <a href="cotacao-personalizada.html">
             <button id="openFilialModal">Cotação Personalizada <i class="bi bi-arrow-right"></i></button>
+          </a>
+          
+        </div>
+          <div class="filial">
+        
+           <a href="devo-comprar-ou-alugar.html">
+            <button id="filial-btn2"> COMPRA VS. LOCAÇÃO ENTENDA</button>
           </a>
         </div>
       </div>
     </nav>
+ <script>
+    fetch('navbar.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('navbar').innerHTML = data;
+        inicializarNavbarInterativa(); // só aqui os links existem no DOM
+      });
 
-    <!-- Script para abrir/fechar menu mobile -->
+    function inicializarNavbarInterativa() {
+      function ativarModoCompra() {
+        const links = document.querySelectorAll('.dropdown-content a');
+        links.forEach(link => {
+          const originalHref = link.getAttribute('data-original-href') || link.getAttribute('href');
+          link.setAttribute('data-original-href', originalHref);
+
+          if (!originalHref.startsWith('comprar-')) {
+            const novoHref = 'comprar-' + originalHref;
+            link.setAttribute('href', novoHref);
+          }
+
+          const originalText = link.getAttribute('data-original-text') || link.textContent;
+          link.setAttribute('data-original-text', originalText);
+
+          if (!originalText.startsWith('Comprar ')) {
+            link.textContent = 'Comprar ' + originalText;
+          }
+        });
+      }
+
+      function restaurarLinksOriginais() {
+        const links = document.querySelectorAll('.dropdown-content a');
+        links.forEach(link => {
+          const originalHref = link.getAttribute('data-original-href');
+          const originalText = link.getAttribute('data-original-text');
+
+          if (originalHref) {
+            link.setAttribute('href', originalHref);
+          }
+          if (originalText) {
+            link.textContent = originalText;
+          }
+        });
+      }
+
+      const comprarLink = document.querySelector('a[href="compra-equipamentos.html"]');
+      const aluguelLink = document.querySelector('a[href="aluguel-equipamentos.html"]');
+
+      if (comprarLink) {
+        comprarLink.addEventListener('mouseenter', ativarModoCompra);
+        comprarLink.addEventListener('mouseleave', restaurarLinksOriginais);
+      }
+
+      if (aluguelLink) {
+        aluguelLink.addEventListener('mouseenter', restaurarLinksOriginais);
+      }
+    }
+  </script>
+
  <script>
     const hamburger = document.getElementById("hamburger");
     const mobileMenu = document.getElementById("mobileMenu");
